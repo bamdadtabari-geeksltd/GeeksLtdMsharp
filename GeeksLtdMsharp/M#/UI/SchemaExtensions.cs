@@ -83,6 +83,36 @@ namespace MSharp
         => @this.container.Search(x => x.Salt, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Asset> Code(
+            this ListModule<Domain.Asset>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Code, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Asset> Cost(
+            this ListModule<Domain.Asset>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Cost, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Asset> Name(
+            this ListModule<Domain.Asset>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Asset> Owner(
+            this ListModule<Domain.Asset>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Owner, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Asset> Type(
+            this ListModule<Domain.Asset>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Type, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.AssetType> Name(
+            this ListModule<Domain.AssetType>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.AuditEvent> Date(
             this ListModule<Domain.AuditEvent>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.Date, fl, ln);
@@ -161,6 +191,16 @@ namespace MSharp
         public static PropertyFilterElement<Domain.LogonFailure> IP(
             this ListModule<Domain.LogonFailure>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.IP, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Owner> FirstName(
+            this ListModule<Domain.Owner>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Owner> LastName(
+            this ListModule<Domain.Owner>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.LastName, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.PasswordResetTicket> DateCreated(
@@ -393,6 +433,36 @@ namespace MSharp
         => @this.container.Field(x => x.Salt, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Asset, string> Code(
+            this ViewModule<Domain.Asset>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Code, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Asset, decimal?> Cost(
+            this ViewModule<Domain.Asset>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Cost, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Asset, string> Name(
+            this ViewModule<Domain.Asset>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Asset, Domain.Owner> Owner(
+            this ViewModule<Domain.Asset>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Owner, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Asset, Domain.AssetType> Type(
+            this ViewModule<Domain.Asset>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Type, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.AssetType, string> Name(
+            this ViewModule<Domain.AssetType>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static ViewElement<Domain.AuditEvent, DateTime> Date(
             this ViewModule<Domain.AuditEvent>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Date, fl, ln);
@@ -471,6 +541,16 @@ namespace MSharp
         public static ViewElement<Domain.LogonFailure, string> IP(
             this ViewModule<Domain.LogonFailure>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.IP, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Owner, string> FirstName(
+            this ViewModule<Domain.Owner>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Owner, string> LastName(
+            this ViewModule<Domain.Owner>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.LastName, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static ViewElement<Domain.PasswordResetTicket, DateTime> DateCreated(
@@ -703,6 +783,36 @@ namespace MSharp
         => @this.container.Column(x => x.Salt, fl, ln);
         
         [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Asset, string> Code(
+            this ListModule<Domain.Asset>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Code, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Asset, decimal?> Cost(
+            this ListModule<Domain.Asset>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Cost, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Asset, string> Name(
+            this ListModule<Domain.Asset>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Name, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Asset, Domain.Owner> Owner(
+            this ListModule<Domain.Asset>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Owner, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Asset, Domain.AssetType> Type(
+            this ListModule<Domain.Asset>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Type, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.AssetType, string> Name(
+            this ListModule<Domain.AssetType>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Name, fl, ln);
+        
+        [MethodColor("#0CCC68")]
         public static ViewElement<Domain.AuditEvent, DateTime> Date(
             this ListModule<Domain.AuditEvent>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.Date, fl, ln);
@@ -781,6 +891,16 @@ namespace MSharp
         public static ViewElement<Domain.LogonFailure, string> IP(
             this ListModule<Domain.LogonFailure>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.IP, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Owner, string> FirstName(
+            this ListModule<Domain.Owner>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Owner, string> LastName(
+            this ListModule<Domain.Owner>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.LastName, fl, ln);
         
         [MethodColor("#0CCC68")]
         public static ViewElement<Domain.PasswordResetTicket, DateTime> DateCreated(
@@ -1008,6 +1128,36 @@ namespace MSharp
         => @this.container.Field(x => x.Salt, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static StringFormElement Code(
+            this FormModule<Domain.Asset>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Code, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static NumberFormElement Cost(
+            this FormModule<Domain.Asset>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Cost, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Name(
+            this FormModule<Domain.Asset>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static AssociationFormElement Owner(
+            this FormModule<Domain.Asset>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Owner, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static AssociationFormElement Type(
+            this FormModule<Domain.Asset>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Type, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Name(
+            this FormModule<Domain.AssetType>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static DateTimeFormElement Date(
             this FormModule<Domain.AuditEvent>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Date, fl, ln);
@@ -1086,6 +1236,16 @@ namespace MSharp
         public static StringFormElement IP(
             this FormModule<Domain.LogonFailure>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.IP, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement FirstName(
+            this FormModule<Domain.Owner>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement LastName(
+            this FormModule<Domain.Owner>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.LastName, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static DateTimeFormElement DateCreated(
