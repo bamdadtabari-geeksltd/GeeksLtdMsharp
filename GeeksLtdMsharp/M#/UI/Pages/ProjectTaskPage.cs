@@ -4,7 +4,7 @@ public class ProjectTaskPage : RootPage
 {
     public ProjectTaskPage()
     {
-        Add<Modules.MainMenu>();
+        Set(PageSettings.LeftMenu, "AdminSettingsMenu");
 
         Add<Modules.ProjectTaskList>();
     }

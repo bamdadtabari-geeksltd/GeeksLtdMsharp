@@ -36,6 +36,12 @@ namespace Modules
             Item("Property")
                 .OnClick(x => x.Go<PropertyPage>());
 
+            Item("Projects").Icon(FA.Cog)
+                .OnClick(x => x.Go<ProjectPage>());
+
+            Item("ProjectTasks").Icon(FA.Cog)
+                .OnClick(x => x.Go<ProjectTaskPage>());
+
         }
     }
 }

@@ -4,8 +4,8 @@ public class ContactPage : RootPage
 {
     public ContactPage()
     {
-        Add<Modules.MainMenu>();
-        
+        Set(PageSettings.LeftMenu, "AdminSettingsMenu");
+
         OnStart(x => x.Go<Contact.ContactsPage>().RunServerSide());
     }
 }

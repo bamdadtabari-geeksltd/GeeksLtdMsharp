@@ -14,9 +14,6 @@
     <PackageReference Include="Olive.Entities" Version="8.0.0" />
     <ProjectReference Include="..\..\Domain\Domain.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modules\NewFolder\" />
-  </ItemGroup>
   <Target Name="Generate code" AfterTargets="AfterBuild">
     <Exec Condition="'$(MSHARP_BUILD)' != 'FULL'" WorkingDirectory="$(TargetDir)" Command="dotnet msharp.dsl.dll /build /ui" />
     <Exec Condition="'$(MSHARP_BUILD)' != 'FULL'" WorkingDirectory="$(TargetDir)" Command="start /min &quot;&quot; msharp /diagnose" />
