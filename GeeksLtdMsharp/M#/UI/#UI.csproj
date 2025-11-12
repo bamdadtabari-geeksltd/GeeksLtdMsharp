@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <RootNamespace>UI</RootNamespace>
+    <OutputPath>..\lib\</OutputPath>
+    <NoWarn>1701;1702;1705;NU1701</NoWarn>
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MSharp" Version="5.3.0" />
+    <PackageReference Include="Olive" Version="8.2.2" />
+    <PackageReference Include="Olive.Entities" Version="8.0.0" />
+    <ProjectReference Include="..\..\Domain\Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules\NewFolder\" />
+  </ItemGroup>
+  <Target Name="Generate code" AfterTargets="AfterBuild">
+    <Exec Condition="'$(MSHARP_BUILD)' != 'FULL'" WorkingDirectory="$(TargetDir)" Command="dotnet msharp.dsl.dll /build /ui" />
+    <Exec Condition="'$(MSHARP_BUILD)' != 'FULL'" WorkingDirectory="$(TargetDir)" Command="start /min &quot;&quot; msharp /diagnose" />
+  </Target>
+</Project>
