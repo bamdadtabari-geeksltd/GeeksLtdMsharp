@@ -3,11 +3,21 @@ using Olive.Entities;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Domain
 {
     public partial class Register
     {
+        // Generate an invitation code for new instances.
+        public Register()
+        {
+            // If new (no ID assigned yet), generate a code.
+            if (ID == Guid.Empty)
+                InvitationCode = GenerateInvitationCode();
+        }
+
         public override Task Validate()
         {
             // Guard: ensure DateOfBirth is set
@@ -33,6 +43,20 @@ namespace Domain
                 throw new ValidationException("Gmail and Yahoo emails are not accepted.");
 
             return base.Validate();
+        }
+
+        private static string GenerateInvitationCode(int length = 10)
+        {
+            const string alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // avoid ambiguous chars
+            var sb = new StringBuilder(length);
+            var bytes = new byte[length];
+            using var rng = RandomNumberGenerator.Create();
+            rng.GetBytes(bytes);
+            for (int i = 0; i < length; i++)
+            {
+                sb.Append(alphabet[bytes[i] % alphabet.Length]);
+            }
+            return sb.ToString();
         }
     }
 }

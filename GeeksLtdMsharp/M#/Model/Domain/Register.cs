@@ -6,9 +6,9 @@ namespace Domain
     {
         public Register()
         {
-            String("First name").Mandatory();
+            String("First Name").Mandatory();
 
-            String("Last name").Mandatory();
+            String("Last Name").Mandatory();
 
             Date("Date of birth").Mandatory();
 
@@ -18,7 +18,7 @@ namespace Domain
 
             String("InvitationCode").Calculated();
 
-            UniqueCombination(new[] { "FirstName" , "LastName", "Email"});
+            UniqueCombination(new[] { "First Name" , "Last Name", "Email"});
         }
 
     }

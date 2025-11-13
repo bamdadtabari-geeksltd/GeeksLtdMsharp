@@ -28,9 +28,6 @@ namespace Modules
                 .IsDefault()
                 .OnClick(x =>
                 {
-                    x.If("info.InvitationCode != \"SuperSecretFormula\"")
-                        .GentleMessage("Invalid registration key.")
-                        .AndExit();
                     x.SaveInDatabase();
                     x.GentleMessage("Saved successfully.");
                 });
