@@ -1,0 +1,47 @@
+﻿@model ViewModel.PropertyView
+@{ Domain.Property item = Model.Item; }
+<!-- Modules\Property\PropertyView.cs:7 -->
+<form data-module="PropertyView" method="post" action="@Url.Current()">
+   @Html.AntiForgeryToken()
+   @Html.StartupActionsJson()
+   <h2>Property Details</h2>
+   <div class="view-body">
+      <div class="form-group row">
+         <label class="control-label">
+            Name
+         </label>
+         <div class="group-control">
+            @item.Name
+         </div>
+      </div>
+      <div class="form-group row">
+         <label class="control-label">
+            Price
+         </label>
+         <div class="group-control">
+            @(string.Format("{0:c}", item.Price))
+         </div>
+      </div>
+      <div class="form-group row">
+         <label class="control-label">
+            Owner
+         </label>
+         <div class="group-control">
+            @item.Owner
+         </div>
+      </div>
+      <div class="form-group row">
+         <label class="control-label">
+            Age
+         </label>
+         <div class="group-control">
+            @item.Age
+         </div>
+      </div>
+   </div>
+   <div class="buttons-row">
+      <div class="buttons">
+         <button type="button" name="Close" class="btn btn-primary" default-button="true" onclick="page.modal.closeMe();">Close</button>
+      </div>
+   </div>
+</form>

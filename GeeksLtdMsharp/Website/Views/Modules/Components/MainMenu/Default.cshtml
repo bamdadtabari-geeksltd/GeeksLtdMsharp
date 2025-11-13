@@ -1,0 +1,19 @@
+﻿@using Olive.Security
+
+@model ViewModel.MainMenu
+@(Layout = null)
+
+<!-- Modules\-Menus\MainMenu.cs:8 -->
+<form data-module="MainMenu" method="post" action="@Url.Current()" class="sidebar-menu">
+   @Html.StartupActionsJson()
+   <ul class="nav flex-column">
+   </ul>
+   <div class="buttons-row">
+      <div class="buttons">
+         @if (User.Identity.IsAuthenticated)
+         {
+         <a name="Logout" class="align-bottom logout" href="#" formaction='@Url.ActionWithQuery("MainMenu/Logout")' default-button="true">Logout</a>
+         }
+      </div>
+   </div>
+</form>

@@ -1,0 +1,81 @@
+﻿@model ViewModel.PropertyForm
+@{Layout = "~/Views/Layouts/AdminDefault.Modal.cshtml";}
+<!-- Modules\Property\PropertyForm.cs:7 -->
+<form data-module="PropertyForm" role="form" method="post" action="@Url.Current()" data-validation-style="tooltip" class="input-form">
+   @Html.AntiForgeryToken()
+   @Html.StartupActionsJson()
+   <h2>Property Details</h2>
+   <div class="form-body">
+      <div class="form-group row required-item">
+         <label for="Name" class="control-label">
+            Name
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="Name" class="form-control" autofocus="autofocus" />
+         </div>
+      </div>
+      <div class="form-group row required-item">
+         <label for="Price" class="control-label">
+            Price
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="Price" class="form-control" data-control="numeric-up-down" />
+         </div>
+      </div>
+      <div class="form-group row required-item">
+         <label for="Owner" class="control-label">
+            Owner
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="Owner" class="form-control" />
+         </div>
+      </div>
+      <div class="form-group row">
+         <label for="Age" class="control-label">
+            Age
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="Age" class="form-control" data-control="numeric-up-down" />
+         </div>
+      </div>
+      <div class="form-group row required-item">
+         <label for="Address_AddressLine1" class="control-label">
+            Address Line 1
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="Address_AddressLine1" class="form-control" />
+         </div>
+      </div>
+      <div class="form-group row required-item">
+         <label for="Address_AddressLine2" class="control-label">
+            Address Line 2
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="Address_AddressLine2" class="form-control" />
+         </div>
+      </div>
+      <div class="form-group row required-item">
+         <label for="Address_Town" class="control-label">
+            Town
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="Address_Town" class="form-control" />
+         </div>
+      </div>
+      <div class="form-group row required-item">
+         <label for="Address_PostalCode" class="control-label">
+            Postal Code
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="Address_PostalCode" class="form-control" />
+         </div>
+      </div>
+   </div>
+   <div class="buttons-row">
+      <div class="buttons">
+         <button type="button" name="Cancel" class="btn btn-secondary" data-confirm-question="are you sure you wanna cancel the Process?" onclick="page.modal.closeMe();">Cancel</button>
+         <button type="submit" name="Save" class="btn btn-primary" formaction='@Url.ActionWithQuery("PropertyForm/Save")' default-button="true"><i class="fas fa-check"></i>
+            Save</button>
+      </div>
+   </div>
+</form>

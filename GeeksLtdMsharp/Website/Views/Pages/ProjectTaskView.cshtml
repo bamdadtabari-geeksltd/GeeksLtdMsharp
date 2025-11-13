@@ -1,0 +1,50 @@
+﻿@model ViewModel.ProjectTaskView
+@{ Domain.ProjectTask item = Model.Item; }
+<!-- Modules\ProjectTask\ProjectTaskView.cs:7 -->
+<form data-module="ProjectTaskView" method="post" action="@Url.Current()">
+   @Html.AntiForgeryToken()
+   @Html.StartupActionsJson()
+   <h2>Tasks</h2>
+   <div class="view-body">
+      <div class="form-group row">
+         <label class="control-label">
+            Project
+         </label>
+         <div class="group-control">
+            @item.Project
+         </div>
+      </div>
+      <div class="form-group row">
+         <label class="control-label">
+            Title
+         </label>
+         <div class="group-control">
+            @item.Title
+         </div>
+      </div>
+      <div class="form-group row">
+         <label class="control-label">
+            Description
+         </label>
+         <div class="group-control">
+            @item.Description
+         </div>
+      </div>
+      <div class="form-group row">
+         <label class="control-label">
+            Is done?
+         </label>
+         <div class="group-control">
+            @if (item.Done) {
+            <i title="yes" class="fa-check fa"></i>
+            }
+         </div>
+      </div>
+   </div>
+   <div class="buttons-row">
+      <div class="buttons">
+         <button type="button" name="Back" class="btn btn-primary" default-button="true" onclick="return page.goBack(this);" data-redirect="ajax"><i class="fas fa-chevron-left"></i>
+            Back</button>
+      </div>
+   </div>
+</form>

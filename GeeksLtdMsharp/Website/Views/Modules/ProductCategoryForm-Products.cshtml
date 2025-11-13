@@ -1,0 +1,37 @@
+﻿@model ViewModel.ProductCategoryForm.ProductsSubForm
+@{ ViewData.TemplateInfo.HtmlFieldPrefix = "Products-" + Model.Item.ID; }
+<tr data-subform="Products" class="subform-item">
+   <td><div class="form-group row">
+         <input type="hidden" asp-for="Item" />
+         <input type="hidden" asp-for="MustBeDeleted" />
+         <div class="group-control">
+            <input type="text" asp-for="Name" class="form-control" />
+         </div>
+      </div></td>
+   <td><div class="form-group row">
+         <div class="group-control">
+            <div class="input-group">
+               <input type="text" asp-for="ProductionDate_time" class="form-control" placeholder="dd/mm/yyyy" data-control="date-picker|time-picker" />
+               <span class="input-group-addon">
+                  <i title="pick a date" class="fa-calendar fa"></i>
+               </span>
+            </div>
+         </div>
+      </div></td>
+   <td><div class="form-group row">
+         <div class="group-control">
+            @Html.RadioButtonsFor(x => x.IsFood, Model.IsFood_Options, new { @class = "form-check-inline" })
+         </div>
+      </div></td>
+   <td><div class="form-group row">
+         <div class="group-control">
+            <textarea asp-for="ProductWebsite" class="form-control" rows="5"></textarea>
+         </div>
+      </div></td>
+   <td><div class="form-group row">
+         <div class="group-control">
+            @Html.FileUploadFor(x => x.Photo, new { accept = ".png,.jpeg,.jpg" }).PrefixName("Products-" + Model.Item.ID)
+         </div>
+      </div></td>
+   <td><a href="#" class="delete-button" title="Remove" data-delete-subform="Products"><i title="remove" class="fa-times fa"></i></a></td>
+</tr>

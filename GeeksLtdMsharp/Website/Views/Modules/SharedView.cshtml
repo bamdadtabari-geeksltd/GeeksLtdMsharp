@@ -1,0 +1,8 @@
+﻿@model ViewModel.SharedView
+
+<!-- Modules\-Custom\SharedView.cs:12 -->
+<form data-module="SharedView" method="post" action="@Url.Current()">
+   @Html.AntiForgeryToken()
+   @Html.StartupActionsJson()
+   <h2>SharedView @info.Mode</h2>
+</form>

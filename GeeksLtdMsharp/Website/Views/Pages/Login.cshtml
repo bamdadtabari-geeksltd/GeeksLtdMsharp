@@ -1,0 +1,13 @@
+﻿@{Layout = "~/Views/Layouts/Login.cshtml";}
+<div class="login-content">
+   <div class="card login">
+      <div class="card-body">
+         @(await Component.InvokeAsync
+         <LoginForm>
+            (ViewBag.LoginForm as ViewModel.LoginForm))
+            @(await Component.InvokeAsync
+            <SocialMediaLogin>
+               (ViewBag.SocialMediaLogin as ViewModel.SocialMediaLogin))
+            </div>
+         </div>
+      </div>

@@ -1,0 +1,24 @@
+﻿@model ViewModel.AssetTypeForm
+<!-- Modules\AssetType\AssetTypeForm.cs:7 -->
+<form data-module="AssetTypeForm" role="form" method="post" action="@Url.Current()" data-validation-style="tooltip" class="input-form">
+   @Html.AntiForgeryToken()
+   @Html.StartupActionsJson()
+   <h2>Asset Types details</h2>
+   <div class="form-body">
+      <div class="form-group row required-item">
+         <label for="Name" class="control-label">
+            Name
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="Name" class="form-control" autofocus="autofocus" />
+         </div>
+      </div>
+   </div>
+   <div class="buttons-row">
+      <div class="buttons">
+         <button type="button" name="Cancel" class="btn btn-secondary" onclick="return page.goBack(this);" data-redirect="ajax">Cancel</button>
+         <button type="submit" name="Save" class="btn btn-primary" formaction='@Url.ActionWithQuery("AssetTypeForm/Save")' default-button="true"><i class="fas fa-check"></i>
+            Save</button>
+      </div>
+   </div>
+</form>

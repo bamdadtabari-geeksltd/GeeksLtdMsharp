@@ -1,0 +1,41 @@
+﻿@model ViewModel.ProjectTaskAdd
+<!-- Modules\ProjectTask\ProjectTaskAdd.cs:7 -->
+<form data-module="ProjectTaskAdd" role="form" method="post" action="@Url.Current()" data-validation-style="tooltip" class="input-form">
+   @Html.AntiForgeryToken()
+   @Html.StartupActionsJson()
+   <h2>Task Details</h2>
+   <div class="form-body">
+      <div class="form-group row">
+         <label for="Project" class="control-label">
+            Project
+         </label>
+         <div class="group-control">
+            <select asp-for="Project" asp-items="@Model.Project_Options" class="form-control" autofocus="autofocus">
+            </select>
+         </div>
+      </div>
+      <div class="form-group row required-item">
+         <label for="Title" class="control-label">
+            Title
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="Title" class="form-control" />
+         </div>
+      </div>
+      <div class="form-group row">
+         <label for="Description" class="control-label">
+            Description
+         </label>
+         <div class="group-control">
+            <textarea asp-for="Description" class="form-control" rows="5"></textarea>
+         </div>
+      </div>
+   </div>
+   <div class="buttons-row">
+      <div class="buttons">
+         <button type="button" name="Cancel" class="btn btn-secondary" onclick="return page.goBack(this);" data-redirect="ajax">Cancel</button>
+         <button type="submit" name="Save" class="btn btn-primary" formaction='@Url.ActionWithQuery("ProjectTaskAdd/Save")' default-button="true"><i class="fas fa-check"></i>
+            Save</button>
+      </div>
+   </div>
+</form>

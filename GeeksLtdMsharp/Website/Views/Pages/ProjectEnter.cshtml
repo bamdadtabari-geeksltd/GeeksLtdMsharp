@@ -1,0 +1,25 @@
+﻿@model ViewModel.ProjectAdd
+@{Layout = "~/Views/Layouts/AdminDefault.Modal.cshtml";}
+<!-- Modules\Project\ProjectAdd.cs:7 -->
+<form data-module="ProjectAdd" role="form" method="post" action="@Url.Current()" data-validation-style="tooltip" class="input-form">
+   @Html.AntiForgeryToken()
+   @Html.StartupActionsJson()
+   <h2>Project Details</h2>
+   <div class="form-body">
+      <div class="form-group row">
+         <label for="Name" class="control-label">
+            Name
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="Name" class="form-control" autofocus="autofocus" />
+         </div>
+      </div>
+   </div>
+   <div class="buttons-row">
+      <div class="buttons">
+         <button type="button" name="Cancel" class="btn btn-secondary" onclick="page.modal.closeMe();">Cancel</button>
+         <button type="submit" name="Save" class="btn btn-primary" formaction='@Url.ActionWithQuery("ProjectAdd/Save")' default-button="true"><i class="fas fa-check"></i>
+            Save</button>
+      </div>
+   </div>
+</form>

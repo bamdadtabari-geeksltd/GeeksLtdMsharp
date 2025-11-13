@@ -1,0 +1,42 @@
+﻿@model ViewModel.ContactForm
+@{Layout = "~/Views/Layouts/AdminDefault.Modal.cshtml";}
+<!-- Modules\Contact\ContactForm.cs:7 -->
+<form data-module="ContactForm" role="form" method="post" action="@Url.Current()" data-validation-style="tooltip" class="input-form">
+   @Html.AntiForgeryToken()
+   @Html.StartupActionsJson()
+   <h2>Contact Details</h2>
+   <div class="form-body">
+      <div class="form-group row required-item">
+         <label for="FirstName" class="control-label">
+            First name
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="FirstName" class="form-control" />
+         </div>
+      </div>
+      <div class="form-group row required-item">
+         <label for="LastName" class="control-label">
+            Last name
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="LastName" class="form-control" />
+         </div>
+      </div>
+      <div class="form-group row required-item">
+         <label for="PhoneNumber" class="control-label">
+            Phone number
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="PhoneNumber" class="form-control" />
+         </div>
+      </div>
+   </div>
+   <div class="buttons-row">
+      <div class="buttons">
+         <button type="button" name="Cancel" class="btn btn-secondary" onclick="page.modal.closeMe();">Cancel</button>
+         <button type="submit" name="Save" class="btn btn-primary" formaction='@Url.ActionWithQuery("ContactForm/Save")' default-button="true"><i class="fas fa-check"></i>
+            Save</button>
+      </div>
+   </div>
+</form>
+@(await Html.PartialAsync("SharedView", ViewBag.SharedView as ViewModel.SharedView))

@@ -1,0 +1,35 @@
+﻿@model ViewModel.ContactView
+@{ Domain.Contact item = Model.Item; }
+<!-- Modules\Contact\ContactView.cs:7 -->
+<form data-module="ContactView" method="post" action="@Url.Current()">
+   @Html.AntiForgeryToken()
+   @Html.StartupActionsJson()
+   <h2>@item.Name Details</h2>
+   <div class="view-body">
+      <div class="form-group row">
+         <label class="control-label">
+            Name
+         </label>
+         <div class="group-control">
+            @item.Name
+         </div>
+      </div>
+      <div class="form-group row">
+         <label class="control-label">
+            Phone number
+         </label>
+         <div class="group-control">
+            @item.PhoneNumber
+         </div>
+      </div>
+   </div>
+   <div class="buttons-row">
+      <div class="buttons">
+         <button type="button" name="Back" class="btn btn-primary" default-button="true" onclick="return page.goBack(this);" data-redirect="ajax"><i class="fas fa-chevron-left"></i>
+            Back</button>
+         <button type="submit" name="Delete" class="btn-danger btn" formaction='@Url.ActionWithQuery("ContactView/Delete")' data-confirm-question="Are you sure you want to delete this Contact?"><i class="fas fa-times"></i>
+            Delete</button>
+      </div>
+   </div>
+</form>
+@(await Html.PartialAsync("SharedView", ViewBag.SharedView as ViewModel.SharedView))

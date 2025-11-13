@@ -1,0 +1,5 @@
+﻿@(await Component.InvokeAsync
+<MainMenu>
+(ViewBag.MainMenu as ViewModel.MainMenu))
+@(await Html.PartialAsync("ProductCategoriesList", ViewBag.ProductCategoriesList as ViewModel.ProductCategoriesList))
+@(await Html.PartialAsync("ProductsList", ViewBag.ProductsList as ViewModel.ProductsList))

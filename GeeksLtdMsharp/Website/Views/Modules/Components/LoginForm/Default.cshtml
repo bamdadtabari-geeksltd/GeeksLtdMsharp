@@ -1,0 +1,37 @@
+﻿@using Olive.Security
+@using BotDetect.Web.Mvc
+
+@model ViewModel.LoginForm
+@(Layout = null)
+
+<!-- Modules\User\LoginForm.cs:7 -->
+<form data-module="LoginForm" role="form" method="post" action="@Url.Current()" data-validation-style="tooltip" class="input-form">
+   @Html.AntiForgeryToken()
+   @Html.StartupActionsJson()
+   <h2>Login</h2>
+   <div class="form-body">
+      <div class="form-group row required-item">
+         <label for="Email" class="control-label">
+            Email
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="Email" class="form-control" placeholder="Your email" />
+         </div>
+      </div>
+      <div class="form-group row required-item">
+         <label for="Password" class="control-label">
+            Password
+         </label>
+         <div class="group-control">
+            <input type="password" asp-for="Password" class="form-control" placeholder="Your password" />
+         </div>
+      </div>
+   </div>
+   <div class="buttons-row">
+      <div class="buttons">
+         <button type="submit" name="Login" class="w-100 btn-login mb-2 btn" formaction='@Url.ActionWithQuery("LoginForm/Login")' default-button="true" onclick="page.waiting.show();">Login</button>
+         <a name="ForgotPassword" class="text-info" href='@Url.Index("LoginForgotPassword")'>Forgot password?</a>
+      </div>
+   </div>
+   <input type="hidden" asp-for="ShowCaptcha" />
+</form>

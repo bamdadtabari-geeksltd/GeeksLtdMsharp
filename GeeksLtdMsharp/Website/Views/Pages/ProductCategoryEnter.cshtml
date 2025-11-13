@@ -1,0 +1,55 @@
+﻿@model ViewModel.ProductCategoryForm
+@{Layout = "~/Views/Layouts/AdminDefault.Modal.cshtml";}
+<!-- Modules\ProductCategory\ProductCategoryForm.cs:8 -->
+<form data-module="ProductCategoryForm" role="form" method="post" action="@Url.Current()" enctype="multipart/form-data" data-validation-style="tooltip" class="input-form">
+   @Html.AntiForgeryToken()
+   @Html.StartupActionsJson()
+   <div class="buttons-row">
+      <div class="buttons">
+         <button type="button" name="Cancel" class="btn btn-secondary" data-confirm-question="are you sure you wanna cancel the proccess?" onclick="page.modal.closeMe();">Cancel</button>
+         <button type="submit" name="Save" class="btn btn-primary" formaction='@Url.ActionWithQuery("ProductCategoryForm/Save")' default-button="true"><i class="fas fa-check"></i>
+            Save</button>
+      </div>
+   </div>
+   <h2>Product Category Details</h2>
+   <div class="form-body">
+      <div class="form-group row required-item">
+         <label for="Name" class="control-label">
+            Name
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="Name" class="form-control" autofocus="autofocus" />
+         </div>
+      </div>
+      <div class="form-group row required-item">
+         <label for="Products" class="control-label">
+            Products
+         </label>
+         <div class="horizontal-subform" data-subform="Products" data-subform-min="1">
+            <table class="subform">
+               <thead>
+                  <tr>
+                     <th>Name</th>
+                     <th>Production date/time</th>
+                     <th class="normal">Type</th>
+                     <th>Product website</th>
+                     <th>Photo</th>
+                     <th><!-- delete --></th>
+                  </tr>
+               </thead>
+               <tbody>
+                  @foreach(var detail in Model.Products)
+                  {
+                  @await Html.PartialAsync("ProductCategoryForm-Products", detail)
+                  }
+               </tbody>
+            </table>
+         </div>
+      </div>
+      <div class="form-group row">
+         <div class="group-control">
+            <button type="submit" name="AddProduct" data-add-subform="Products" class="btn btn-secondary" formaction='@Url.ActionWithQuery("ProductCategoryForm_Products_DetailsForm/AddProduct")'>Add Product</button>
+         </div>
+      </div>
+   </div>
+</form>

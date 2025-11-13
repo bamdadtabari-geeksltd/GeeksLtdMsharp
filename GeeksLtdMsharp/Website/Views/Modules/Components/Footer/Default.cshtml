@@ -1,0 +1,21 @@
+﻿@using Olive.Security
+
+@model ViewModel.Footer
+@(Layout = null)
+
+<!-- Modules\-Custom\Footer.cs:14 -->
+<form data-module="Footer" method="post" action="@Url.Current()" class="website-footer">
+   @Html.AntiForgeryToken()
+   @Html.StartupActionsJson()
+   <div>
+      <a name="Email" title="Contact Us" aria-label="Contact Us" href="http://www.geeks.ltd.uk/software-development-quote.html" target="_blank"><i class="fas fa-envelope-square fa-3x"></i></a>
+      <a name="LinkedIn" title="LinkedIn" aria-label="LinkedIn" href="http://www.linkedin.com/company/geeks-ltd" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+      <a name="Facebook" title="Facebook" aria-label="Facebook" href="https://www.facebook.com/geeksltd" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a>
+      <a name="Twitter" title="Twitter" aria-label="Twitter" href="https://twitter.com/GeeksLtd" target="_blank"><i class="fab fa-twitter-square fa-3x"></i></a>
+      <br/>
+      <a name="SoftwareDevelopment" class="plain-text" href="http://www.geeks.ltd.uk" target="_blank">Software development</a>
+      by
+      <a name="Geeks" href="http://www.geeks.ltd.uk" target="_blank">Geeks</a>
+      &copy; @LocalTime.Now.Year. All rights reserved.
+   </div>
+</form>

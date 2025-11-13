@@ -1,0 +1,56 @@
+﻿@model ViewModel.AssetView
+@{ Domain.Asset item = Model.Item; }
+<!-- Modules\Asset\AssetView.cs:7 -->
+<form data-module="AssetView" method="post" action="@Url.Current()">
+   @Html.AntiForgeryToken()
+   @Html.StartupActionsJson()
+   <h2>Asset details</h2>
+   <div class="view-body">
+      <div class="form-group row">
+         <label class="control-label">
+            Code
+         </label>
+         <div class="group-control">
+            @item.Code
+         </div>
+      </div>
+      <div class="form-group row">
+         <label class="control-label">
+            Name
+         </label>
+         <div class="group-control">
+            @item.Name
+         </div>
+      </div>
+      <div class="form-group row">
+         <label class="control-label">
+            Asset type
+         </label>
+         <div class="group-control">
+            @item.Type
+         </div>
+      </div>
+      <div class="form-group row">
+         <label class="control-label">
+            Cost
+         </label>
+         <div class="group-control">
+            @(string.Format("{0:c}", item.Cost))
+         </div>
+      </div>
+      <div class="form-group row">
+         <label class="control-label">
+            Held by
+         </label>
+         <div class="group-control">
+            @item.Owner
+         </div>
+      </div>
+   </div>
+   <div class="buttons-row">
+      <div class="buttons">
+         <button type="button" name="Back" class="btn btn-primary" default-button="true" onclick="return page.goBack(this);" data-redirect="ajax"><i class="fas fa-chevron-left"></i>
+            Back</button>
+      </div>
+   </div>
+</form>

@@ -1,0 +1,16 @@
+﻿@model ViewModel.Error401
+<!-- Modules\Errors\Error401.cs:12 -->
+<form data-module="Error401" method="post" action="@Url.Current()">
+   @Html.AntiForgeryToken()
+   @Html.StartupActionsJson()
+   <div class="error-page text-center">
+      <h1 class="display-1">
+         401
+      </h1>
+      <h2>Unauthorized</h2>
+      <p class="lead">
+         You do not have permission to view this page.
+      </p>
+      <a href="/login" class="btn btn-primary mt-3">Go to Login Page</a>
+   </div>
+</form>

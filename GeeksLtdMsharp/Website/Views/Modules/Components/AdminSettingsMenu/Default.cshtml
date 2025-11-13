@@ -1,0 +1,57 @@
+﻿@using Olive.Security
+
+@model ViewModel.AdminSettingsMenu
+@(Layout = null)
+
+<!-- Modules\-Menus\AdminSettingsMenu.cs:8 -->
+<div data-module="AdminSettingsMenu" class="sidebar-menu">
+   @Html.StartupActionsJson()
+   <ul class="nav flex-column">
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "ProductCategories") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("ProductCategories/")))">
+         <a href="@Url.Index("ProductCategory")" data-redirect="ajax"><i class="fas fa-cat"></i>
+            Product Categories</a>
+      </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "Products") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("Products/")))">
+         <a href="@Url.Index("Product")" data-redirect="ajax">Products</a>
+      </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "Contacts") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("Contacts/")))">
+         <a href="@Url.Index("Contact")" data-redirect="ajax">Contacts</a>
+      </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "Administrators") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("Administrators/")))">
+         <a href="@Url.Index("AdminSettingsAdministrators")" data-redirect="ajax">Administrators</a>
+      </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "GeneralSettings") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("GeneralSettings/")))">
+         <a href="@Url.Index("AdminSettingsGeneral")" data-redirect="ajax">General Settings</a>
+      </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "ProductSummery") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("ProductSummery/")))">
+         <a href="@Url.Index("Summary")" data-redirect="ajax">Product Summery</a>
+      </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "Property") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("Property/")))">
+         <a href="@Url.Index("Property")" data-redirect="ajax">Property</a>
+      </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "Projects") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("Projects/")))">
+         <a href="@Url.Index("Project")" data-redirect="ajax"><i class="fas fa-cog"></i>
+            Projects</a>
+      </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "ProjectTasks") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("ProjectTasks/")))">
+         <a href="@Url.Index("ProjectTask")" data-redirect="ajax"><i class="fas fa-cog"></i>
+            ProjectTasks</a>
+      </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "AssetTypes") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("AssetTypes/")))">
+         <a href="@Url.Index("AssetType")" data-redirect="ajax"><i class="fas fa-bars"></i>
+            Asset Types</a>
+      </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "Owners") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("Owners/")))">
+         <a href="@Url.Index("Owner")" data-redirect="ajax"><i class="fas fa-bars"></i>
+            Owners</a>
+      </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "AssetsList") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("AssetsList/")))">
+         <a href="@Url.Index("Asset")" data-redirect="ajax"><i class="fas fa-bars"></i>
+            Assets List</a>
+      </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "Clients") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("Clients/")))">
+         <a href="@Url.Index("Client")" data-redirect="ajax"><i class="fas fa-bars"></i>
+            Clients</a>
+      </li>
+   </ul>
+</div>

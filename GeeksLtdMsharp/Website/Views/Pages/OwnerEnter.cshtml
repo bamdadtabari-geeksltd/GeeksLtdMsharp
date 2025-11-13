@@ -1,0 +1,32 @@
+﻿@model ViewModel.OwnerForm
+<!-- Modules\Owner\OwnerForm.cs:7 -->
+<form data-module="OwnerForm" role="form" method="post" action="@Url.Current()" data-validation-style="tooltip" class="input-form">
+   @Html.AntiForgeryToken()
+   @Html.StartupActionsJson()
+   <h2>Owner details</h2>
+   <div class="form-body">
+      <div class="form-group row">
+         <label for="FirstName" class="control-label">
+            First name
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="FirstName" class="form-control" autofocus="autofocus" />
+         </div>
+      </div>
+      <div class="form-group row">
+         <label for="LastName" class="control-label">
+            Last name
+         </label>
+         <div class="group-control">
+            <input type="text" asp-for="LastName" class="form-control" />
+         </div>
+      </div>
+   </div>
+   <div class="buttons-row">
+      <div class="buttons">
+         <button type="button" name="Cancel" class="btn btn-secondary" onclick="return page.goBack(this);" data-redirect="ajax">Cancel</button>
+         <button type="submit" name="Save" class="btn btn-primary" formaction='@Url.ActionWithQuery("OwnerForm/Save")' default-button="true"><i class="fas fa-check"></i>
+            Save</button>
+      </div>
+   </div>
+</form>
