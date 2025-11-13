@@ -51,6 +51,10 @@ namespace Modules
             Item("Assets List").Icon(FA.Navicon)
                 .OnClick(x => x.Go<AssetPage>());
 
+
+            Item("Clients")
+                .Icon(FA.Navicon)
+                .OnClick(x => x.Go<ClientPage>());
         }
     }
 }

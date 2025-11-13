@@ -15,6 +15,20 @@
     {
         static IDatabase Database => Context.Current.Database();
         
+        /// <summary>Filters the Client records to the ones having any associated Invoices with the specified criteria.</summary>
+        public static IDatabaseQuery<Domain.Client> HavingAnyInvoices(
+            this IDatabaseQuery<Domain.Client> query, Expression<Func<Domain.Invoice, bool>> criteria = null)
+        {
+            return query.WhereIn(Database.Of<Domain.Invoice>().Where(criteria), x => x.Client);
+        }
+        
+        /// <summary>Filters the Client records to the ones having no associated Invoices with the specified criteria.</summary>
+        public static IDatabaseQuery<Domain.Client> HavingNoInvoices(
+            this IDatabaseQuery<Domain.Client> query, Expression<Func<Domain.Invoice, bool>> criteria = null)
+        {
+            return query.WhereNotIn(Database.Of<Domain.Invoice>().Where(criteria), x => x.Client);
+        }
+        
         /// <summary>
         /// Filters the ProductCategory records to the ones having any associated Products with the specified criteria.<para/>
         /// </summary>

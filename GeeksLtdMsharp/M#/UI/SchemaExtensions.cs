@@ -153,6 +153,16 @@ namespace MSharp
         => @this.container.Search(x => x.UserIp, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Client> Company(
+            this ListModule<Domain.Client>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Company, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Client> Invoices(
+            this ListModule<Domain.Client>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Invoices, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.Contact> FirstName(
             this ListModule<Domain.Contact>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.FirstName, fl, ln);
@@ -171,6 +181,26 @@ namespace MSharp
         public static PropertyFilterElement<Domain.Contact> PhoneNumber(
             this ListModule<Domain.Contact>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.PhoneNumber, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Invoice> Amount(
+            this ListModule<Domain.Invoice>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Amount, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Invoice> Client(
+            this ListModule<Domain.Invoice>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Client, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Invoice> Date(
+            this ListModule<Domain.Invoice>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Date, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Invoice> Description(
+            this ListModule<Domain.Invoice>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Description, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.LogonFailure> Attempts(
@@ -503,6 +533,16 @@ namespace MSharp
         => @this.container.Field(x => x.UserIp, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Client, string> Company(
+            this ViewModule<Domain.Client>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Company, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Client, IDatabaseQuery<Domain.Invoice>> Invoices(
+            this ViewModule<Domain.Client>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Invoices, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static ViewElement<Domain.Contact, string> FirstName(
             this ViewModule<Domain.Contact>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.FirstName, fl, ln);
@@ -521,6 +561,26 @@ namespace MSharp
         public static ViewElement<Domain.Contact, string> PhoneNumber(
             this ViewModule<Domain.Contact>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.PhoneNumber, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Invoice, decimal?> Amount(
+            this ViewModule<Domain.Invoice>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Amount, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Invoice, Domain.Client> Client(
+            this ViewModule<Domain.Invoice>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Client, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Invoice, DateTime?> Date(
+            this ViewModule<Domain.Invoice>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Date, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Invoice, string> Description(
+            this ViewModule<Domain.Invoice>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Description, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static ViewElement<Domain.LogonFailure, int> Attempts(
@@ -853,6 +913,16 @@ namespace MSharp
         => @this.container.Column(x => x.UserIp, fl, ln);
         
         [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Client, string> Company(
+            this ListModule<Domain.Client>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Company, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Client, IDatabaseQuery<Domain.Invoice>> Invoices(
+            this ListModule<Domain.Client>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Invoices, fl, ln);
+        
+        [MethodColor("#0CCC68")]
         public static ViewElement<Domain.Contact, string> FirstName(
             this ListModule<Domain.Contact>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.FirstName, fl, ln);
@@ -871,6 +941,26 @@ namespace MSharp
         public static ViewElement<Domain.Contact, string> PhoneNumber(
             this ListModule<Domain.Contact>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.PhoneNumber, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Invoice, decimal?> Amount(
+            this ListModule<Domain.Invoice>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Amount, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Invoice, Domain.Client> Client(
+            this ListModule<Domain.Invoice>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Client, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Invoice, DateTime?> Date(
+            this ListModule<Domain.Invoice>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Date, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Invoice, string> Description(
+            this ListModule<Domain.Invoice>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Description, fl, ln);
         
         [MethodColor("#0CCC68")]
         public static ViewElement<Domain.LogonFailure, int> Attempts(
@@ -1198,6 +1288,16 @@ namespace MSharp
         => @this.container.Field(x => x.UserIp, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static StringFormElement Company(
+            this FormModule<Domain.Client>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Company, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static AssociationFormElement Invoices(
+            this FormModule<Domain.Client>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Invoices, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static StringFormElement FirstName(
             this FormModule<Domain.Contact>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.FirstName, fl, ln);
@@ -1216,6 +1316,26 @@ namespace MSharp
         public static StringFormElement PhoneNumber(
             this FormModule<Domain.Contact>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.PhoneNumber, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static NumberFormElement Amount(
+            this FormModule<Domain.Invoice>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Amount, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static AssociationFormElement Client(
+            this FormModule<Domain.Invoice>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Client, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static DateTimeFormElement Date(
+            this FormModule<Domain.Invoice>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Date, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Description(
+            this FormModule<Domain.Invoice>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Description, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static NumberFormElement Attempts(
