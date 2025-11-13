@@ -42,6 +42,15 @@ namespace Modules
             Item("ProjectTasks").Icon(FA.Cog)
                 .OnClick(x => x.Go<ProjectTaskPage>());
 
+            Item("Asset Types").Icon(FA.Navicon)
+                .OnClick(x => x.Go<AssetTypePage>());
+
+            Item("Owners").Icon(FA.Navicon)
+                .OnClick(x => x.Go<OwnerPage>());
+
+            Item("Assets List").Icon(FA.Navicon)
+                .OnClick(x => x.Go<AssetPage>());
+
         }
     }
 }

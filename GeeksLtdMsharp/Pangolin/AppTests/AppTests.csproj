@@ -8,6 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Uploadable.Files\Untitled.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Uploadable.Files\Untitled.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.0" />
     <PackageReference Include="MSTest" Version="4.0.1" />
     <PackageReference Include="Pangolin.NETCore" Version="2.0.4" />
@@ -15,10 +23,6 @@
 
   <ItemGroup>
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Uploadable.Files\" />
   </ItemGroup>
 
 </Project>

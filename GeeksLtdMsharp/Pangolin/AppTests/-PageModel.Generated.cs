@@ -57,6 +57,12 @@ namespace Modules.Menus
         public HtmlLinkElement Administrators => ByXPath<HtmlLinkElement>("Administrators", $"{DataModuleXPath}//*[@name='Administrators']");
         public HtmlLinkElement GeneralSettings => ByXPath<HtmlLinkElement>("GeneralSettings", $"{DataModuleXPath}//*[@name='GeneralSettings']");
         public HtmlLinkElement ProductSummery => ByXPath<HtmlLinkElement>("ProductSummery", $"{DataModuleXPath}//*[@name='ProductSummery']");
+        public HtmlLinkElement Property => ByXPath<HtmlLinkElement>("Property", $"{DataModuleXPath}//*[@name='Property']");
+        public HtmlLinkElement Projects => ByXPath<HtmlLinkElement>("Projects", $"{DataModuleXPath}//*[@name='Projects']");
+        public HtmlLinkElement ProjectTasks => ByXPath<HtmlLinkElement>("ProjectTasks", $"{DataModuleXPath}//*[@name='ProjectTasks']");
+        public HtmlLinkElement AssetTypes => ByXPath<HtmlLinkElement>("AssetTypes", $"{DataModuleXPath}//*[@name='AssetTypes']");
+        public HtmlLinkElement Owners => ByXPath<HtmlLinkElement>("Owners", $"{DataModuleXPath}//*[@name='Owners']");
+        public HtmlLinkElement AssetsList => ByXPath<HtmlLinkElement>("AssetsList", $"{DataModuleXPath}//*[@name='AssetsList']");
     }
 }
 
@@ -130,6 +136,111 @@ namespace Modules.Administrator
     }
 }
 
+// AssetTypeForm
+namespace Modules.AssetType
+{
+    public class AssetTypeForm : ModulePageModel
+    {
+        public AssetTypeForm(UIContext ctx) : base(ctx) => DataModuleXPath = "//*[@data-module='AssetTypeForm']";
+        public HtmlTextElement Header => ByXPath<HtmlTextElement>("Asset Types details", $"{DataModuleXPath}//*[@name='Asset Types details']");
+        public HtmlTextboxElement Name => ByXPath<HtmlTextboxElement>("Name", $"{DataModuleXPath}//*[@name='Name']");
+        
+        public HtmlButtonElement CancelButton => ByXPath<HtmlButtonElement>("Cancel", $"{DataModuleXPath}//*[@name='Cancel']");
+        public HtmlButtonElement SaveButton => ByXPath<HtmlButtonElement>("Save", $"{DataModuleXPath}//*[@name='Save']");
+    }
+}
+
+// AssetTypesList
+namespace Modules.AssetType
+{
+    public class AssetTypesList : ModulePageModel
+    {
+        public AssetTypesList(UIContext ctx) : base(ctx) => DataModuleXPath = "//*[@data-module='AssetTypesList']";
+        public HtmlTextElement Header => ByXPath<HtmlTextElement>("Asset Types", $"{DataModuleXPath}//*[@name='Asset Types']");
+        public ListRow Row(int rowIndex) => new ListRow(UIContext, ListRenderMode.Grid, DataModuleXPath) { RowIndex = rowIndex };
+        public ListRow Row(string containingText) => new ListRow(UIContext, ListRenderMode.Grid, DataModuleXPath) { ContainingText = containingText };
+        public ListRow Row(That that, string text) => new ListRow(UIContext, ListRenderMode.Grid, DataModuleXPath) { That = that, ContainingText = text };
+        
+        public HtmlButtonElement AddAssetTypeButton => ByXPath<HtmlButtonElement>("AddAssetType", $"{DataModuleXPath}//*[@name='AddAssetType']");
+        
+        public class ListRow : ListRowPageModel
+        {
+            public ListRow(UIContext ctx, ListRenderMode listMode, string container) : base(ctx, listMode, container + "//table[contains(concat(' ', normalize-space(@class), ' '), ' grid ')]") { }
+            public HtmlTextElement Name => ByXPath<HtmlTextElement>("Name", $"{RowSelector}//*[contains(@name,'.Name')]");
+            public HtmlButtonElement EditButton => ByXPath<HtmlButtonElement>("Edit", $"{RowSelector}//*[@name='Edit']");
+            public HtmlButtonElement DeleteButton => ByXPath<HtmlButtonElement>("Delete", $"{RowSelector}//*[@name='Delete']");
+        }
+    }
+}
+
+// AssetForm
+namespace Modules.Asset
+{
+    public class AssetForm : ModulePageModel
+    {
+        public AssetForm(UIContext ctx) : base(ctx) => DataModuleXPath = "//*[@data-module='AssetForm']";
+        public HtmlTextElement Header => ByXPath<HtmlTextElement>("Asset details", $"{DataModuleXPath}//*[@name='Asset details']");
+        public HtmlTextboxElement Code => ByXPath<HtmlTextboxElement>("Code", $"{DataModuleXPath}//*[@name='Code']");
+        
+        public HtmlTextboxElement Name => ByXPath<HtmlTextboxElement>("Name", $"{DataModuleXPath}//*[@name='Name']");
+        
+        // PageModel.JSService.Inject("Opacity");
+        public HtmlDropdownListElement Type => ByXPath<HtmlDropdownListElement>("Type", $"{DataModuleXPath}//*[@name='Type']");
+        
+        public HtmlTextboxElement Cost => ByXPath<HtmlTextboxElement>("Cost", $"{DataModuleXPath}//*[@name='Cost']");
+        
+        // PageModel.JSService.Inject("Opacity");
+        public HtmlDropdownListElement Owner => ByXPath<HtmlDropdownListElement>("Owner", $"{DataModuleXPath}//*[@name='Owner']");
+        
+        public HtmlButtonElement CancelButton => ByXPath<HtmlButtonElement>("Cancel", $"{DataModuleXPath}//*[@name='Cancel']");
+        public HtmlButtonElement SaveButton => ByXPath<HtmlButtonElement>("Save", $"{DataModuleXPath}//*[@name='Save']");
+    }
+}
+
+// AssetsList
+namespace Modules.Asset
+{
+    public class AssetsList : ModulePageModel
+    {
+        public AssetsList(UIContext ctx) : base(ctx) => DataModuleXPath = "//*[@data-module='AssetsList']";
+        public HtmlTextElement Header => ByXPath<HtmlTextElement>("Assets", $"{DataModuleXPath}//*[@name='Assets']");
+        public ListRow Row(int rowIndex) => new ListRow(UIContext, ListRenderMode.Grid, DataModuleXPath) { RowIndex = rowIndex };
+        public ListRow Row(string containingText) => new ListRow(UIContext, ListRenderMode.Grid, DataModuleXPath) { ContainingText = containingText };
+        public ListRow Row(That that, string text) => new ListRow(UIContext, ListRenderMode.Grid, DataModuleXPath) { That = that, ContainingText = text };
+        
+        // PageModel.JSService.Inject("Opacity");
+        public HtmlDropdownListElement Type => ByXPath<HtmlDropdownListElement>("Type", $"{DataModuleXPath}//*[@name='Type']");
+        public HtmlTextboxElement FullSearch => ByXPath<HtmlTextboxElement>("FullSearch", $"{DataModuleXPath}//*[@name='FullSearch']");
+        
+        public HtmlButtonElement SearchButton => ByXPath<HtmlButtonElement>("Search", $"{DataModuleXPath}//*[@name='Search']");
+        public HtmlButtonElement AddAssetButton => ByXPath<HtmlButtonElement>("AddAsset", $"{DataModuleXPath}//*[@name='AddAsset']");
+        
+        public class ListRow : ListRowPageModel
+        {
+            public ListRow(UIContext ctx, ListRenderMode listMode, string container) : base(ctx, listMode, container + "//table[contains(concat(' ', normalize-space(@class), ' '), ' grid ')]") { }
+            public HtmlTextElement Code => ByXPath<HtmlTextElement>("Code", $"{RowSelector}//*[contains(@name,'.Code')]");
+            public HtmlTextElement Name => ByXPath<HtmlTextElement>("Name", $"{RowSelector}//*[contains(@name,'.Name')]");
+            public HtmlTextElement AssetType => ByXPath<HtmlTextElement>("AssetType", $"{RowSelector}//*[contains(@name,'.AssetType')]");
+            public HtmlTextElement Cost => ByXPath<HtmlTextElement>("Cost", $"{RowSelector}//*[contains(@name,'.Cost')]");
+            public HtmlTextElement Owner => ByXPath<HtmlTextElement>("Owner", $"{RowSelector}//*[contains(@name,'.Owner')]");
+            public HtmlButtonElement ViewButton => ByXPath<HtmlButtonElement>("View", $"{RowSelector}//*[@name='View']");
+            public HtmlButtonElement EditButton => ByXPath<HtmlButtonElement>("Edit", $"{RowSelector}//*[@name='Edit']");
+            public HtmlButtonElement DeleteButton => ByXPath<HtmlButtonElement>("Delete", $"{RowSelector}//*[@name='Delete']");
+        }
+    }
+}
+
+// AssetView
+namespace Modules.Asset
+{
+    public class AssetView : ModulePageModel
+    {
+        public AssetView(UIContext ctx) : base(ctx) => DataModuleXPath = "//*[@data-module='AssetView']";
+        public HtmlTextElement Header => ByXPath<HtmlTextElement>("Asset details", $"{DataModuleXPath}//*[@name='Asset details']");
+        public HtmlButtonElement BackButton => ByXPath<HtmlButtonElement>("Back", $"{DataModuleXPath}//*[@name='Back']");
+    }
+}
+
 // ContactForm
 namespace Modules.Contact
 {
@@ -193,6 +304,46 @@ namespace Modules.CustomModules
     public class Error401GenericModule : ModulePageModel
     {
         public Error401GenericModule(UIContext ctx) : base(ctx) => DataModuleXPath = "//*[@data-module='Error401']";
+    }
+}
+
+// OwnerForm
+namespace Modules.Owner
+{
+    public class OwnerForm : ModulePageModel
+    {
+        public OwnerForm(UIContext ctx) : base(ctx) => DataModuleXPath = "//*[@data-module='OwnerForm']";
+        public HtmlTextElement Header => ByXPath<HtmlTextElement>("Owner details", $"{DataModuleXPath}//*[@name='Owner details']");
+        public HtmlTextboxElement FirstName => ByXPath<HtmlTextboxElement>("FirstName", $"{DataModuleXPath}//*[@name='FirstName']");
+        
+        public HtmlTextboxElement LastName => ByXPath<HtmlTextboxElement>("LastName", $"{DataModuleXPath}//*[@name='LastName']");
+        
+        public HtmlButtonElement CancelButton => ByXPath<HtmlButtonElement>("Cancel", $"{DataModuleXPath}//*[@name='Cancel']");
+        public HtmlButtonElement SaveButton => ByXPath<HtmlButtonElement>("Save", $"{DataModuleXPath}//*[@name='Save']");
+    }
+}
+
+// OwnersList
+namespace Modules.Owner
+{
+    public class OwnersList : ModulePageModel
+    {
+        public OwnersList(UIContext ctx) : base(ctx) => DataModuleXPath = "//*[@data-module='OwnersList']";
+        public HtmlTextElement Header => ByXPath<HtmlTextElement>("Owners", $"{DataModuleXPath}//*[@name='Owners']");
+        public ListRow Row(int rowIndex) => new ListRow(UIContext, ListRenderMode.Grid, DataModuleXPath) { RowIndex = rowIndex };
+        public ListRow Row(string containingText) => new ListRow(UIContext, ListRenderMode.Grid, DataModuleXPath) { ContainingText = containingText };
+        public ListRow Row(That that, string text) => new ListRow(UIContext, ListRenderMode.Grid, DataModuleXPath) { That = that, ContainingText = text };
+        
+        public HtmlButtonElement AddOwnerButton => ByXPath<HtmlButtonElement>("AddOwner", $"{DataModuleXPath}//*[@name='AddOwner']");
+        
+        public class ListRow : ListRowPageModel
+        {
+            public ListRow(UIContext ctx, ListRenderMode listMode, string container) : base(ctx, listMode, container + "//table[contains(concat(' ', normalize-space(@class), ' '), ' grid ')]") { }
+            public HtmlTextElement FirstName => ByXPath<HtmlTextElement>("FirstName", $"{RowSelector}//*[contains(@name,'.FirstName')]");
+            public HtmlTextElement LastName => ByXPath<HtmlTextElement>("LastName", $"{RowSelector}//*[contains(@name,'.LastName')]");
+            public HtmlButtonElement EditButton => ByXPath<HtmlButtonElement>("Edit", $"{RowSelector}//*[@name='Edit']");
+            public HtmlButtonElement DeleteButton => ByXPath<HtmlButtonElement>("Delete", $"{RowSelector}//*[@name='Delete']");
+        }
     }
 }
 
@@ -350,6 +501,132 @@ namespace Modules.Product
         public HtmlTextElement Header => ByXPath<HtmlTextElement>("Header", $"{DataModuleXPath}//*[@name='Header']");
         public HtmlButtonElement BackButton => ByXPath<HtmlButtonElement>("Back", $"{DataModuleXPath}//*[@name='Back']");
         public HtmlButtonElement DeleteButton => ByXPath<HtmlButtonElement>("Delete", $"{DataModuleXPath}//*[@name='Delete']");
+    }
+}
+
+// ProjectTaskAdd
+namespace Modules.ProjectTask
+{
+    public class ProjectTaskAddForm : ModulePageModel
+    {
+        public ProjectTaskAddForm(UIContext ctx) : base(ctx) => DataModuleXPath = "//*[@data-module='ProjectTaskAdd']";
+        public HtmlTextElement Header => ByXPath<HtmlTextElement>("Task Details", $"{DataModuleXPath}//*[@name='Task Details']");
+        // PageModel.JSService.Inject("Opacity");
+        public HtmlDropdownListElement Project => ByXPath<HtmlDropdownListElement>("Project", $"{DataModuleXPath}//*[@name='Project']");
+        
+        public HtmlTextboxElement Title => ByXPath<HtmlTextboxElement>("Title", $"{DataModuleXPath}//*[@name='Title']");
+        
+        public HtmlTextboxElement Description => ByXPath<HtmlTextboxElement>("Description", $"{DataModuleXPath}//*[@name='Description']");
+        
+        public HtmlButtonElement CancelButton => ByXPath<HtmlButtonElement>("Cancel", $"{DataModuleXPath}//*[@name='Cancel']");
+        public HtmlButtonElement SaveButton => ByXPath<HtmlButtonElement>("Save", $"{DataModuleXPath}//*[@name='Save']");
+    }
+}
+
+// ProjectTaskEdit
+namespace Modules.ProjectTask
+{
+    public class ProjectTaskEditForm : ModulePageModel
+    {
+        public ProjectTaskEditForm(UIContext ctx) : base(ctx) => DataModuleXPath = "//*[@data-module='ProjectTaskEdit']";
+        public HtmlTextElement Header => ByXPath<HtmlTextElement>("Task Details", $"{DataModuleXPath}//*[@name='Task Details']");
+        public HtmlHorizontalCheckBoxesElement Done => ByXPath<HtmlHorizontalCheckBoxesElement>("Done", $"{DataModuleXPath}//*[@name='Done']");
+        
+        public HtmlTextboxElement Title => ByXPath<HtmlTextboxElement>("Title", $"{DataModuleXPath}//*[@name='Title']");
+        
+        public HtmlTextboxElement Description => ByXPath<HtmlTextboxElement>("Description", $"{DataModuleXPath}//*[@name='Description']");
+        
+        public HtmlButtonElement CancelButton => ByXPath<HtmlButtonElement>("Cancel", $"{DataModuleXPath}//*[@name='Cancel']");
+        public HtmlButtonElement SaveButton => ByXPath<HtmlButtonElement>("Save", $"{DataModuleXPath}//*[@name='Save']");
+    }
+}
+
+// ProjectTaskList
+namespace Modules.ProjectTask
+{
+    public class ProjectTaskList : ModulePageModel
+    {
+        public ProjectTaskList(UIContext ctx) : base(ctx) => DataModuleXPath = "//*[@data-module='ProjectTaskList']";
+        public HtmlTextElement Header => ByXPath<HtmlTextElement>("Tasks", $"{DataModuleXPath}//*[@name='Tasks']");
+        public ListRow Row(int rowIndex) => new ListRow(UIContext, ListRenderMode.Grid, DataModuleXPath) { RowIndex = rowIndex };
+        public ListRow Row(string containingText) => new ListRow(UIContext, ListRenderMode.Grid, DataModuleXPath) { ContainingText = containingText };
+        public ListRow Row(That that, string text) => new ListRow(UIContext, ListRenderMode.Grid, DataModuleXPath) { That = that, ContainingText = text };
+        
+        public HtmlButtonElement AddTaskButton => ByXPath<HtmlButtonElement>("AddTask", $"{DataModuleXPath}//*[@name='AddTask']");
+        
+        public class ListRow : ListRowPageModel
+        {
+            public ListRow(UIContext ctx, ListRenderMode listMode, string container) : base(ctx, listMode, container + "//table[contains(concat(' ', normalize-space(@class), ' '), ' grid ')]") { }
+            public HtmlTextElement Project => ByXPath<HtmlTextElement>("Project", $"{RowSelector}//*[contains(@name,'.Project')]");
+            public HtmlTextElement Title => ByXPath<HtmlTextElement>("Title", $"{RowSelector}//*[contains(@name,'.Title')]");
+            public HtmlTextElement Description => ByXPath<HtmlTextElement>("Description", $"{RowSelector}//*[contains(@name,'.Description')]");
+            public HtmlTextElement IsDone => ByXPath<HtmlTextElement>("IsDone", $"{RowSelector}//*[contains(@name,'.IsDone')]");
+            public HtmlButtonElement ViewButton => ByXPath<HtmlButtonElement>("View", $"{RowSelector}//*[@name='View']");
+            public HtmlButtonElement EditButton => ByXPath<HtmlButtonElement>("Edit", $"{RowSelector}//*[@name='Edit']");
+            public HtmlButtonElement DeleteButton => ByXPath<HtmlButtonElement>("Delete", $"{RowSelector}//*[@name='Delete']");
+        }
+    }
+}
+
+// ProjectTaskView
+namespace Modules.ProjectTask
+{
+    public class ProjectTaskView : ModulePageModel
+    {
+        public ProjectTaskView(UIContext ctx) : base(ctx) => DataModuleXPath = "//*[@data-module='ProjectTaskView']";
+        public HtmlTextElement Header => ByXPath<HtmlTextElement>("Tasks", $"{DataModuleXPath}//*[@name='Tasks']");
+        public HtmlButtonElement BackButton => ByXPath<HtmlButtonElement>("Back", $"{DataModuleXPath}//*[@name='Back']");
+    }
+}
+
+// ProjectAdd
+namespace Modules.Project
+{
+    public class ProjectAddForm : ModulePageModel
+    {
+        public ProjectAddForm(UIContext ctx) : base(ctx) => DataModuleXPath = "//*[@data-module='ProjectAdd']";
+        public HtmlTextElement Header => ByXPath<HtmlTextElement>("Project Details", $"{DataModuleXPath}//*[@name='Project Details']");
+        public HtmlTextboxElement Name => ByXPath<HtmlTextboxElement>("Name", $"{DataModuleXPath}//*[@name='Name']");
+        
+        public HtmlButtonElement CancelButton => ByXPath<HtmlButtonElement>("Cancel", $"{DataModuleXPath}//*[@name='Cancel']");
+        public HtmlButtonElement SaveButton => ByXPath<HtmlButtonElement>("Save", $"{DataModuleXPath}//*[@name='Save']");
+    }
+}
+
+// ProjectEdit
+namespace Modules.Project
+{
+    public class ProjectEditForm : ModulePageModel
+    {
+        public ProjectEditForm(UIContext ctx) : base(ctx) => DataModuleXPath = "//*[@data-module='ProjectEdit']";
+        public HtmlTextElement Header => ByXPath<HtmlTextElement>("Project Details", $"{DataModuleXPath}//*[@name='Project Details']");
+        public HtmlTextboxElement Name => ByXPath<HtmlTextboxElement>("Name", $"{DataModuleXPath}//*[@name='Name']");
+        
+        public HtmlButtonElement CancelButton => ByXPath<HtmlButtonElement>("Cancel", $"{DataModuleXPath}//*[@name='Cancel']");
+        public HtmlButtonElement SaveButton => ByXPath<HtmlButtonElement>("Save", $"{DataModuleXPath}//*[@name='Save']");
+    }
+}
+
+// ProjectsList
+namespace Modules.Project
+{
+    public class ProjectsList : ModulePageModel
+    {
+        public ProjectsList(UIContext ctx) : base(ctx) => DataModuleXPath = "//*[@data-module='ProjectsList']";
+        public HtmlTextElement Header => ByXPath<HtmlTextElement>("Projects", $"{DataModuleXPath}//*[@name='Projects']");
+        public ListRow Row(int rowIndex) => new ListRow(UIContext, ListRenderMode.Grid, DataModuleXPath) { RowIndex = rowIndex };
+        public ListRow Row(string containingText) => new ListRow(UIContext, ListRenderMode.Grid, DataModuleXPath) { ContainingText = containingText };
+        public ListRow Row(That that, string text) => new ListRow(UIContext, ListRenderMode.Grid, DataModuleXPath) { That = that, ContainingText = text };
+        
+        public HtmlButtonElement NewProjectButton => ByXPath<HtmlButtonElement>("NewProject", $"{DataModuleXPath}//*[@name='NewProject']");
+        
+        public class ListRow : ListRowPageModel
+        {
+            public ListRow(UIContext ctx, ListRenderMode listMode, string container) : base(ctx, listMode, container + "//table[contains(concat(' ', normalize-space(@class), ' '), ' grid ')]") { }
+            public HtmlTextElement Name => ByXPath<HtmlTextElement>("Name", $"{RowSelector}//*[contains(@name,'.Name')]");
+            public HtmlButtonElement EditButton => ByXPath<HtmlButtonElement>("Edit", $"{RowSelector}//*[@name='Edit']");
+            public HtmlButtonElement DeleteButton => ByXPath<HtmlButtonElement>("Delete", $"{RowSelector}//*[@name='Delete']");
+        }
     }
 }
 
