@@ -418,6 +418,36 @@ namespace MSharp
         => @this.container.Search(x => x.Price, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Register> DateOfBirth(
+            this ListModule<Domain.Register>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.DateOfBirth, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Register> Email(
+            this ListModule<Domain.Register>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Email, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Register> FirstName(
+            this ListModule<Domain.Register>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Register> InvitationCode(
+            this ListModule<Domain.Register>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.InvitationCode, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Register> LastName(
+            this ListModule<Domain.Register>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.LastName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Register> Password(
+            this ListModule<Domain.Register>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Password, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.Settings> CacheVersion(
             this ListModule<Domain.Settings>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.CacheVersion, fl, ln);
@@ -901,6 +931,36 @@ namespace MSharp
         public static ViewElement<Domain.Property, decimal> Price(
             this ViewModule<Domain.Property>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Price, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Register, DateTime> DateOfBirth(
+            this ViewModule<Domain.Register>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.DateOfBirth, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Register, string> Email(
+            this ViewModule<Domain.Register>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Email, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Register, string> FirstName(
+            this ViewModule<Domain.Register>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Register, string> InvitationCode(
+            this ViewModule<Domain.Register>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.InvitationCode, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Register, string> LastName(
+            this ViewModule<Domain.Register>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.LastName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Register, string> Password(
+            this ViewModule<Domain.Register>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Password, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static ViewElement<Domain.Settings, int> CacheVersion(
@@ -1388,6 +1448,36 @@ namespace MSharp
         => @this.container.Column(x => x.Price, fl, ln);
         
         [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Register, DateTime> DateOfBirth(
+            this ListModule<Domain.Register>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.DateOfBirth, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Register, string> Email(
+            this ListModule<Domain.Register>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Email, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Register, string> FirstName(
+            this ListModule<Domain.Register>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Register, string> InvitationCode(
+            this ListModule<Domain.Register>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.InvitationCode, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Register, string> LastName(
+            this ListModule<Domain.Register>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.LastName, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Register, string> Password(
+            this ListModule<Domain.Register>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Password, fl, ln);
+        
+        [MethodColor("#0CCC68")]
         public static ViewElement<Domain.Settings, int> CacheVersion(
             this ListModule<Domain.Settings>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.CacheVersion, fl, ln);
@@ -1836,6 +1926,31 @@ namespace MSharp
         public static NumberFormElement Price(
             this FormModule<Domain.Property>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Price, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static DateTimeFormElement DateOfBirth(
+            this FormModule<Domain.Register>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.DateOfBirth, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Email(
+            this FormModule<Domain.Register>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Email, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement FirstName(
+            this FormModule<Domain.Register>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement LastName(
+            this FormModule<Domain.Register>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.LastName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Password(
+            this FormModule<Domain.Register>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Password, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static NumberFormElement CacheVersion(

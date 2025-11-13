@@ -30,6 +30,8 @@ namespace Controllers
         [Route("employee")]
         public async Task<ActionResult> Index(vm.EmployeesList info)
         {
+            ViewData["LeftMenu"] = "AdminSettingsMenu";
+            
             return View(info);
         }
         

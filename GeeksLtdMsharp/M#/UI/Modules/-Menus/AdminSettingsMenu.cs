@@ -70,8 +70,12 @@ namespace Modules
 
             Item("Employees")
                 .VisibleIf(AppRole.Admin)
-                .Icon(FA.AddressBook)
+                .Icon(FA.Facebook)
                 .OnClick(x => x.Go<EmployeePage>());
+
+            Item("Register")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<RegisterPage>());
         }
     }
 }

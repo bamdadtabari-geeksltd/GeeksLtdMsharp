@@ -33,6 +33,8 @@ namespace Controllers
             // Remove initial validation messages as well as unintended injected data
             ModelState.Clear();
             
+            ViewData["LeftMenu"] = "AdminSettingsMenu";
+            
             return View(info);
         }
         

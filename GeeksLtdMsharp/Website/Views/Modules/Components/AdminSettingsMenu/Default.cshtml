@@ -68,9 +68,13 @@
       @if (User.IsInRole("Admin"))
       {
       <li class="@("active".OnlyWhen(Model.ActiveItem == "Employees") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("Employees/")))">
-         <a href="@Url.Index("Employee")" data-redirect="ajax"><i class="far fa-address-book"></i>
+         <a href="@Url.Index("Employee")" data-redirect="ajax"><i class="fab fa-facebook-f"></i>
             Employees</a>
       </li>
       }
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "Register") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("Register/")))">
+         <a href="@Url.Index("Register")" data-redirect="ajax"><i class="fas fa-cog"></i>
+            Register</a>
+      </li>
    </ul>
 </div>
