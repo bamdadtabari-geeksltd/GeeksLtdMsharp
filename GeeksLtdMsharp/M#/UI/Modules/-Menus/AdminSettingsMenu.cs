@@ -55,6 +55,18 @@ namespace Modules
             Item("Clients")
                 .Icon(FA.Navicon)
                 .OnClick(x => x.Go<ClientPage>());
+
+            Item("Projects2")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<Project2Page>());
+
+            Item("Developers")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<DeveloperPage>());
+
+            Item("Time logs")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<TimeLogPage>());
         }
     }
 }

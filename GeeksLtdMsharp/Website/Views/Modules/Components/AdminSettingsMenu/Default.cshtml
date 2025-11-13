@@ -53,5 +53,17 @@
          <a href="@Url.Index("Client")" data-redirect="ajax"><i class="fas fa-bars"></i>
             Clients</a>
       </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "Projects2") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("Projects2/")))">
+         <a href="@Url.Index("Project2")" data-redirect="ajax"><i class="fas fa-cog"></i>
+            Projects2</a>
+      </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "Developers") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("Developers/")))">
+         <a href="@Url.Index("Developer")" data-redirect="ajax"><i class="fas fa-cog"></i>
+            Developers</a>
+      </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "TimeLogs") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("TimeLogs/")))">
+         <a href="@Url.Index("TimeLog")" data-redirect="ajax"><i class="fas fa-cog"></i>
+            Time logs</a>
+      </li>
    </ul>
 </div>

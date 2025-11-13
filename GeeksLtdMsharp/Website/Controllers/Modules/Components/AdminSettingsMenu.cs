@@ -64,7 +64,10 @@ namespace Controllers
                 new MenuItem ("AssetTypes", Url.Index("AssetType")),
                 new MenuItem ("Owners", Url.Index("Owner")),
                 new MenuItem ("AssetsList", Url.Index("Asset")),
-                new MenuItem ("Clients", Url.Index("Client"))
+                new MenuItem ("Clients", Url.Index("Client")),
+                new MenuItem ("Projects2", Url.Index("Project2")),
+                new MenuItem ("Developers", Url.Index("Developer")),
+                new MenuItem ("TimeLogs", Url.Index("TimeLog"))
             };
             
             items.Do(x => x.Url = x.Url.UrlDecode());

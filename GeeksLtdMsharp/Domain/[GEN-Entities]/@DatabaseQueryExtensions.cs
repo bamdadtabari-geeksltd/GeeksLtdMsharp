@@ -30,6 +30,22 @@
         }
         
         /// <summary>
+        /// Filters the Developer records to the ones having any associated TimeLogs with the specified criteria.<para/>
+        /// </summary>
+        public static IDatabaseQuery<Domain.Developer> HavingAnyTimeLogs(
+            this IDatabaseQuery<Domain.Developer> query, Expression<Func<Domain.TimeLog, bool>> criteria = null)
+        {
+            return query.WhereIn(Database.Of<Domain.TimeLog>().Where(criteria), x => x.Developer);
+        }
+        
+        /// <summary>Filters the Developer records to the ones having no associated TimeLogs with the specified criteria.</summary>
+        public static IDatabaseQuery<Domain.Developer> HavingNoTimeLogs(
+            this IDatabaseQuery<Domain.Developer> query, Expression<Func<Domain.TimeLog, bool>> criteria = null)
+        {
+            return query.WhereNotIn(Database.Of<Domain.TimeLog>().Where(criteria), x => x.Developer);
+        }
+        
+        /// <summary>
         /// Filters the ProductCategory records to the ones having any associated Products with the specified criteria.<para/>
         /// </summary>
         public static IDatabaseQuery<Domain.ProductCategory> HavingAnyProducts(
@@ -45,6 +61,20 @@
             this IDatabaseQuery<Domain.ProductCategory> query, Expression<Func<Domain.Product, bool>> criteria = null)
         {
             return query.WhereNotIn(Database.Of<Domain.Product>().Where(criteria), x => x.ProductCategory);
+        }
+        
+        /// <summary>Filters the Project2 records to the ones having any associated TimeLogs with the specified criteria.</summary>
+        public static IDatabaseQuery<Domain.Project2> HavingAnyTimeLogs(
+            this IDatabaseQuery<Domain.Project2> query, Expression<Func<Domain.TimeLog, bool>> criteria = null)
+        {
+            return query.WhereIn(Database.Of<Domain.TimeLog>().Where(criteria), x => x.Project2);
+        }
+        
+        /// <summary>Filters the Project2 records to the ones having no associated TimeLogs with the specified criteria.</summary>
+        public static IDatabaseQuery<Domain.Project2> HavingNoTimeLogs(
+            this IDatabaseQuery<Domain.Project2> query, Expression<Func<Domain.TimeLog, bool>> criteria = null)
+        {
+            return query.WhereNotIn(Database.Of<Domain.TimeLog>().Where(criteria), x => x.Project2);
         }
     }
 }

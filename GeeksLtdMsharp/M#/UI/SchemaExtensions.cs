@@ -183,6 +183,36 @@ namespace MSharp
         => @this.container.Search(x => x.PhoneNumber, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Developer> FirstName(
+            this ListModule<Domain.Developer>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Developer> FullName(
+            this ListModule<Domain.Developer>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.FullName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Developer> LastName(
+            this ListModule<Domain.Developer>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.LastName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Developer> LatestWork(
+            this ListModule<Domain.Developer>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.LatestWork, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Developer> TimeLogs(
+            this ListModule<Domain.Developer>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.TimeLogs, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Developer> TotalWork(
+            this ListModule<Domain.Developer>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.TotalWork, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.Invoice> Amount(
             this ListModule<Domain.Invoice>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.Amount, fl, ln);
@@ -323,6 +353,21 @@ namespace MSharp
         => @this.container.Search(x => x.Title, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Project2> Name(
+            this ListModule<Domain.Project2>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Project2> TimeLogs(
+            this ListModule<Domain.Project2>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.TimeLogs, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Project2> TotalWorkHours(
+            this ListModule<Domain.Project2>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.TotalWorkHours, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.Property> Address(
             this ListModule<Domain.Property>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.Address, fl, ln);
@@ -361,6 +406,41 @@ namespace MSharp
         public static PropertyFilterElement<Domain.Settings> PasswordResetTicketExpiryMinutes(
             this ListModule<Domain.Settings>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.PasswordResetTicketExpiryMinutes, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.TimeLog> Date(
+            this ListModule<Domain.TimeLog>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Date, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.TimeLog> Details(
+            this ListModule<Domain.TimeLog>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Details, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.TimeLog> Developer(
+            this ListModule<Domain.TimeLog>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Developer, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.TimeLog> EndTime(
+            this ListModule<Domain.TimeLog>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.EndTime, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.TimeLog> Hours(
+            this ListModule<Domain.TimeLog>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Hours, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.TimeLog> Project2(
+            this ListModule<Domain.TimeLog>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Project2, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.TimeLog> StartTime(
+            this ListModule<Domain.TimeLog>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.StartTime, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.User> Email(
@@ -563,6 +643,36 @@ namespace MSharp
         => @this.container.Field(x => x.PhoneNumber, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Developer, string> FirstName(
+            this ViewModule<Domain.Developer>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Developer, string> FullName(
+            this ViewModule<Domain.Developer>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.FullName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Developer, string> LastName(
+            this ViewModule<Domain.Developer>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.LastName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Developer, string> LatestWork(
+            this ViewModule<Domain.Developer>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.LatestWork, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Developer, IDatabaseQuery<Domain.TimeLog>> TimeLogs(
+            this ViewModule<Domain.Developer>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.TimeLogs, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Developer, decimal> TotalWork(
+            this ViewModule<Domain.Developer>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.TotalWork, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static ViewElement<Domain.Invoice, decimal?> Amount(
             this ViewModule<Domain.Invoice>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Amount, fl, ln);
@@ -703,6 +813,21 @@ namespace MSharp
         => @this.container.Field(x => x.Title, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Project2, string> Name(
+            this ViewModule<Domain.Project2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Project2, IDatabaseQuery<Domain.TimeLog>> TimeLogs(
+            this ViewModule<Domain.Project2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.TimeLogs, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Project2, decimal> TotalWorkHours(
+            this ViewModule<Domain.Project2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.TotalWorkHours, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static ViewElement<Domain.Property, Task<Address>> Address(
             this ViewModule<Domain.Property>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Address, fl, ln);
@@ -741,6 +866,41 @@ namespace MSharp
         public static ViewElement<Domain.Settings, int> PasswordResetTicketExpiryMinutes(
             this ViewModule<Domain.Settings>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.PasswordResetTicketExpiryMinutes, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.TimeLog, DateTime> Date(
+            this ViewModule<Domain.TimeLog>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Date, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.TimeLog, string> Details(
+            this ViewModule<Domain.TimeLog>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Details, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.TimeLog, Domain.Developer> Developer(
+            this ViewModule<Domain.TimeLog>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Developer, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.TimeLog, TimeSpan> EndTime(
+            this ViewModule<Domain.TimeLog>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.EndTime, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.TimeLog, decimal> Hours(
+            this ViewModule<Domain.TimeLog>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Hours, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.TimeLog, Domain.Project2> Project2(
+            this ViewModule<Domain.TimeLog>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Project2, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.TimeLog, TimeSpan> StartTime(
+            this ViewModule<Domain.TimeLog>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.StartTime, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static ViewElement<Domain.User, string> Email(
@@ -943,6 +1103,36 @@ namespace MSharp
         => @this.container.Column(x => x.PhoneNumber, fl, ln);
         
         [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Developer, string> FirstName(
+            this ListModule<Domain.Developer>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Developer, string> FullName(
+            this ListModule<Domain.Developer>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.FullName, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Developer, string> LastName(
+            this ListModule<Domain.Developer>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.LastName, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Developer, string> LatestWork(
+            this ListModule<Domain.Developer>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.LatestWork, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Developer, IDatabaseQuery<Domain.TimeLog>> TimeLogs(
+            this ListModule<Domain.Developer>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.TimeLogs, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Developer, decimal> TotalWork(
+            this ListModule<Domain.Developer>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.TotalWork, fl, ln);
+        
+        [MethodColor("#0CCC68")]
         public static ViewElement<Domain.Invoice, decimal?> Amount(
             this ListModule<Domain.Invoice>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.Amount, fl, ln);
@@ -1083,6 +1273,21 @@ namespace MSharp
         => @this.container.Column(x => x.Title, fl, ln);
         
         [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Project2, string> Name(
+            this ListModule<Domain.Project2>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Name, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Project2, IDatabaseQuery<Domain.TimeLog>> TimeLogs(
+            this ListModule<Domain.Project2>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.TimeLogs, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Project2, decimal> TotalWorkHours(
+            this ListModule<Domain.Project2>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.TotalWorkHours, fl, ln);
+        
+        [MethodColor("#0CCC68")]
         public static ViewElement<Domain.Property, Task<Address>> Address(
             this ListModule<Domain.Property>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.Address, fl, ln);
@@ -1121,6 +1326,41 @@ namespace MSharp
         public static ViewElement<Domain.Settings, int> PasswordResetTicketExpiryMinutes(
             this ListModule<Domain.Settings>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.PasswordResetTicketExpiryMinutes, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.TimeLog, DateTime> Date(
+            this ListModule<Domain.TimeLog>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Date, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.TimeLog, string> Details(
+            this ListModule<Domain.TimeLog>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Details, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.TimeLog, Domain.Developer> Developer(
+            this ListModule<Domain.TimeLog>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Developer, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.TimeLog, TimeSpan> EndTime(
+            this ListModule<Domain.TimeLog>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.EndTime, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.TimeLog, decimal> Hours(
+            this ListModule<Domain.TimeLog>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Hours, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.TimeLog, Domain.Project2> Project2(
+            this ListModule<Domain.TimeLog>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Project2, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.TimeLog, TimeSpan> StartTime(
+            this ListModule<Domain.TimeLog>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.StartTime, fl, ln);
         
         [MethodColor("#0CCC68")]
         public static ViewElement<Domain.User, string> Email(
@@ -1318,6 +1558,21 @@ namespace MSharp
         => @this.container.Field(x => x.PhoneNumber, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static StringFormElement FirstName(
+            this FormModule<Domain.Developer>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement LastName(
+            this FormModule<Domain.Developer>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.LastName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static AssociationFormElement TimeLogs(
+            this FormModule<Domain.Developer>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.TimeLogs, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static NumberFormElement Amount(
             this FormModule<Domain.Invoice>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Amount, fl, ln);
@@ -1453,6 +1708,16 @@ namespace MSharp
         => @this.container.Field(x => x.Title, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static StringFormElement Name(
+            this FormModule<Domain.Project2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static AssociationFormElement TimeLogs(
+            this FormModule<Domain.Project2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.TimeLogs, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static AssociationFormElement Address(
             this FormModule<Domain.Property>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Address, fl, ln);
@@ -1491,6 +1756,36 @@ namespace MSharp
         public static NumberFormElement PasswordResetTicketExpiryMinutes(
             this FormModule<Domain.Settings>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.PasswordResetTicketExpiryMinutes, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static DateTimeFormElement Date(
+            this FormModule<Domain.TimeLog>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Date, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Details(
+            this FormModule<Domain.TimeLog>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Details, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static AssociationFormElement Developer(
+            this FormModule<Domain.TimeLog>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Developer, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static DateTimeFormElement EndTime(
+            this FormModule<Domain.TimeLog>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.EndTime, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static AssociationFormElement Project2(
+            this FormModule<Domain.TimeLog>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Project2, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static DateTimeFormElement StartTime(
+            this FormModule<Domain.TimeLog>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.StartTime, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static StringFormElement Email(
