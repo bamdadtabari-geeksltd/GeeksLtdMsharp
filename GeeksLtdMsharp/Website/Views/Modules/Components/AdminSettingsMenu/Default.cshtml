@@ -76,5 +76,13 @@
          <a href="@Url.Index("Register")" data-redirect="ajax"><i class="fas fa-cog"></i>
             Register</a>
       </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "Countries") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("Countries/")))">
+         <a href="@Url.Index("Country")" data-redirect="ajax"><i class="fas fa-cog"></i>
+            Countries</a>
+      </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "Reseller") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("Reseller/")))">
+         <a href="@Url.Index("Reseller")" data-redirect="ajax"><i class="fas fa-cog"></i>
+            Reseller</a>
+      </li>
    </ul>
 </div>

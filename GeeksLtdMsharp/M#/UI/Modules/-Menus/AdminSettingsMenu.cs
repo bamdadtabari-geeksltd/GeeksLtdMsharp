@@ -76,6 +76,14 @@ namespace Modules
             Item("Register")
                 .Icon(FA.Cog)
                 .OnClick(x => x.Go<RegisterPage>());
+
+            Item("Countries")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<CountryPage>());
+
+            Item("Reseller")
+                .Icon(FA.WindowRestore)
+                .OnClick(x => x.Go<ResellerPage>());
         }
     }
 }

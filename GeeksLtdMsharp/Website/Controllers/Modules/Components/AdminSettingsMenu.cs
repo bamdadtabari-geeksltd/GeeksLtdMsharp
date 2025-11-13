@@ -69,7 +69,9 @@ namespace Controllers
                 new MenuItem ("Developers", Url.Index("Developer")),
                 new MenuItem ("TimeLogs", Url.Index("TimeLog")),
                 new MenuItem ("Employees", Url.Index("Employee")),
-                new MenuItem ("Register", Url.Index("Register"))
+                new MenuItem ("Register", Url.Index("Register")),
+                new MenuItem ("Countries", Url.Index("Country")),
+                new MenuItem ("Reseller", Url.Index("Reseller"))
             };
             
             items.Do(x => x.Url = x.Url.UrlDecode());

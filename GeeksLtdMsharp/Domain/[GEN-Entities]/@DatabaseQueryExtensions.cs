@@ -29,6 +29,48 @@
             return query.WhereNotIn(Database.Of<Domain.Invoice>().Where(criteria), x => x.Client);
         }
         
+        /// <summary>Filters the Country records to the ones having any associated Cities with the specified criteria.</summary>
+        public static IDatabaseQuery<Domain.Country> HavingAnyCities(
+            this IDatabaseQuery<Domain.Country> query, Expression<Func<Domain.City, bool>> criteria = null)
+        {
+            return query.WhereIn(Database.Of<Domain.City>().Where(criteria), x => x.Country);
+        }
+        
+        /// <summary>Filters the Country records to the ones having no associated Cities with the specified criteria.</summary>
+        public static IDatabaseQuery<Domain.Country> HavingNoCities(
+            this IDatabaseQuery<Domain.Country> query, Expression<Func<Domain.City, bool>> criteria = null)
+        {
+            return query.WhereNotIn(Database.Of<Domain.City>().Where(criteria), x => x.Country);
+        }
+        
+        /// <summary>Filters the Country records to the ones having any associated Customers with the specified criteria.</summary>
+        public static IDatabaseQuery<Domain.Country> HavingAnyCustomers(
+            this IDatabaseQuery<Domain.Country> query, Expression<Func<Domain.Customer, bool>> criteria = null)
+        {
+            return query.WhereIn(Database.Of<Domain.Customer>().Where(criteria), x => x.Country);
+        }
+        
+        /// <summary>Filters the Country records to the ones having no associated Customers with the specified criteria.</summary>
+        public static IDatabaseQuery<Domain.Country> HavingNoCustomers(
+            this IDatabaseQuery<Domain.Country> query, Expression<Func<Domain.Customer, bool>> criteria = null)
+        {
+            return query.WhereNotIn(Database.Of<Domain.Customer>().Where(criteria), x => x.Country);
+        }
+        
+        /// <summary>Filters the Country records to the ones having any associated Resellers with the specified criteria.</summary>
+        public static IDatabaseQuery<Domain.Country> HavingAnyResellers(
+            this IDatabaseQuery<Domain.Country> query, Expression<Func<Domain.Reseller, bool>> criteria = null)
+        {
+            return query.WhereIn(Database.Of<Domain.Reseller>().Where(criteria), x => x.Country);
+        }
+        
+        /// <summary>Filters the Country records to the ones having no associated Resellers with the specified criteria.</summary>
+        public static IDatabaseQuery<Domain.Country> HavingNoResellers(
+            this IDatabaseQuery<Domain.Country> query, Expression<Func<Domain.Reseller, bool>> criteria = null)
+        {
+            return query.WhereNotIn(Database.Of<Domain.Reseller>().Where(criteria), x => x.Country);
+        }
+        
         /// <summary>
         /// Filters the Developer records to the ones having any associated TimeLogs with the specified criteria.<para/>
         /// </summary>
