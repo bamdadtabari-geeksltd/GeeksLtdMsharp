@@ -263,6 +263,96 @@ namespace MSharp
         => @this.container.Search(x => x.TotalWork, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailMessage> Attachments(
+            this ListModule<Domain.EmailMessage>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Attachments, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailMessage> Bcc(
+            this ListModule<Domain.EmailMessage>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Bcc, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailMessage> Body(
+            this ListModule<Domain.EmailMessage>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Body, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailMessage> Cc(
+            this ListModule<Domain.EmailMessage>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Cc, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailMessage> FromAddress(
+            this ListModule<Domain.EmailMessage>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.FromAddress, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailMessage> FromName(
+            this ListModule<Domain.EmailMessage>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.FromName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailMessage> Html(
+            this ListModule<Domain.EmailMessage>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Html, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailMessage> ReplyToAddress(
+            this ListModule<Domain.EmailMessage>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.ReplyToAddress, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailMessage> ReplyToName(
+            this ListModule<Domain.EmailMessage>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.ReplyToName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailMessage> Retries(
+            this ListModule<Domain.EmailMessage>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Retries, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailMessage> SendableDate(
+            this ListModule<Domain.EmailMessage>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.SendableDate, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailMessage> Subject(
+            this ListModule<Domain.EmailMessage>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Subject, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailMessage> To(
+            this ListModule<Domain.EmailMessage>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.To, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailMessage> VCalendarView(
+            this ListModule<Domain.EmailMessage>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.VCalendarView, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailTemplate> Body(
+            this ListModule<Domain.EmailTemplate>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Body, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailTemplate> Key(
+            this ListModule<Domain.EmailTemplate>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Key, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailTemplate> MandatoryPlaceholders(
+            this ListModule<Domain.EmailTemplate>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.MandatoryPlaceholders, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.EmailTemplate> Subject(
+            this ListModule<Domain.EmailTemplate>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Subject, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.Employee> Email(
             this ListModule<Domain.Employee>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.Email, fl, ln);
@@ -496,6 +586,26 @@ namespace MSharp
         public static PropertyFilterElement<Domain.Register> Password(
             this ListModule<Domain.Register>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.Password, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Registration> Email(
+            this ListModule<Domain.Registration>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Email, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Registration> FirstName(
+            this ListModule<Domain.Registration>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Registration> IsSubscribed(
+            this ListModule<Domain.Registration>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.IsSubscribed, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Registration> LastName(
+            this ListModule<Domain.Registration>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.LastName, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.Reseller> Country(
@@ -838,6 +948,96 @@ namespace MSharp
         => @this.container.Field(x => x.TotalWork, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailMessage, string> Attachments(
+            this ViewModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Attachments, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailMessage, string> Bcc(
+            this ViewModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Bcc, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailMessage, string> Body(
+            this ViewModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Body, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailMessage, string> Cc(
+            this ViewModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Cc, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailMessage, string> FromAddress(
+            this ViewModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.FromAddress, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailMessage, string> FromName(
+            this ViewModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.FromName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailMessage, bool> Html(
+            this ViewModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Html, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailMessage, string> ReplyToAddress(
+            this ViewModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.ReplyToAddress, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailMessage, string> ReplyToName(
+            this ViewModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.ReplyToName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailMessage, int> Retries(
+            this ViewModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Retries, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailMessage, DateTime> SendableDate(
+            this ViewModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.SendableDate, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailMessage, string> Subject(
+            this ViewModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Subject, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailMessage, string> To(
+            this ViewModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.To, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailMessage, string> VCalendarView(
+            this ViewModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.VCalendarView, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailTemplate, string> Body(
+            this ViewModule<Domain.EmailTemplate>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Body, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailTemplate, string> Key(
+            this ViewModule<Domain.EmailTemplate>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Key, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailTemplate, string> MandatoryPlaceholders(
+            this ViewModule<Domain.EmailTemplate>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.MandatoryPlaceholders, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.EmailTemplate, string> Subject(
+            this ViewModule<Domain.EmailTemplate>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Subject, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static ViewElement<Domain.Employee, string> Email(
             this ViewModule<Domain.Employee>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Email, fl, ln);
@@ -1071,6 +1271,26 @@ namespace MSharp
         public static ViewElement<Domain.Register, string> Password(
             this ViewModule<Domain.Register>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Password, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Registration, string> Email(
+            this ViewModule<Domain.Registration>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Email, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Registration, string> FirstName(
+            this ViewModule<Domain.Registration>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Registration, bool> IsSubscribed(
+            this ViewModule<Domain.Registration>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.IsSubscribed, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Registration, string> LastName(
+            this ViewModule<Domain.Registration>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.LastName, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static ViewElement<Domain.Reseller, Domain.Country> Country(
@@ -1413,6 +1633,96 @@ namespace MSharp
         => @this.container.Column(x => x.TotalWork, fl, ln);
         
         [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailMessage, string> Attachments(
+            this ListModule<Domain.EmailMessage>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Attachments, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailMessage, string> Bcc(
+            this ListModule<Domain.EmailMessage>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Bcc, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailMessage, string> Body(
+            this ListModule<Domain.EmailMessage>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Body, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailMessage, string> Cc(
+            this ListModule<Domain.EmailMessage>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Cc, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailMessage, string> FromAddress(
+            this ListModule<Domain.EmailMessage>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.FromAddress, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailMessage, string> FromName(
+            this ListModule<Domain.EmailMessage>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.FromName, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailMessage, bool> Html(
+            this ListModule<Domain.EmailMessage>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Html, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailMessage, string> ReplyToAddress(
+            this ListModule<Domain.EmailMessage>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.ReplyToAddress, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailMessage, string> ReplyToName(
+            this ListModule<Domain.EmailMessage>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.ReplyToName, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailMessage, int> Retries(
+            this ListModule<Domain.EmailMessage>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Retries, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailMessage, DateTime> SendableDate(
+            this ListModule<Domain.EmailMessage>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.SendableDate, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailMessage, string> Subject(
+            this ListModule<Domain.EmailMessage>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Subject, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailMessage, string> To(
+            this ListModule<Domain.EmailMessage>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.To, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailMessage, string> VCalendarView(
+            this ListModule<Domain.EmailMessage>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.VCalendarView, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailTemplate, string> Body(
+            this ListModule<Domain.EmailTemplate>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Body, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailTemplate, string> Key(
+            this ListModule<Domain.EmailTemplate>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Key, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailTemplate, string> MandatoryPlaceholders(
+            this ListModule<Domain.EmailTemplate>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.MandatoryPlaceholders, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.EmailTemplate, string> Subject(
+            this ListModule<Domain.EmailTemplate>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Subject, fl, ln);
+        
+        [MethodColor("#0CCC68")]
         public static ViewElement<Domain.Employee, string> Email(
             this ListModule<Domain.Employee>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.Email, fl, ln);
@@ -1646,6 +1956,26 @@ namespace MSharp
         public static ViewElement<Domain.Register, string> Password(
             this ListModule<Domain.Register>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.Password, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Registration, string> Email(
+            this ListModule<Domain.Registration>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Email, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Registration, string> FirstName(
+            this ListModule<Domain.Registration>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Registration, bool> IsSubscribed(
+            this ListModule<Domain.Registration>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.IsSubscribed, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Registration, string> LastName(
+            this ListModule<Domain.Registration>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.LastName, fl, ln);
         
         [MethodColor("#0CCC68")]
         public static ViewElement<Domain.Reseller, Domain.Country> Country(
@@ -1968,6 +2298,96 @@ namespace MSharp
         => @this.container.Field(x => x.TimeLogs, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static StringFormElement Attachments(
+            this FormModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Attachments, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Bcc(
+            this FormModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Bcc, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Body(
+            this FormModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Body, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Cc(
+            this FormModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Cc, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement FromAddress(
+            this FormModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.FromAddress, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement FromName(
+            this FormModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.FromName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static BooleanFormElement Html(
+            this FormModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Html, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement ReplyToAddress(
+            this FormModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.ReplyToAddress, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement ReplyToName(
+            this FormModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.ReplyToName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static NumberFormElement Retries(
+            this FormModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Retries, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static DateTimeFormElement SendableDate(
+            this FormModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.SendableDate, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Subject(
+            this FormModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Subject, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement To(
+            this FormModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.To, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement VCalendarView(
+            this FormModule<Domain.EmailMessage>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.VCalendarView, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Body(
+            this FormModule<Domain.EmailTemplate>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Body, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Key(
+            this FormModule<Domain.EmailTemplate>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Key, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement MandatoryPlaceholders(
+            this FormModule<Domain.EmailTemplate>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.MandatoryPlaceholders, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Subject(
+            this FormModule<Domain.EmailTemplate>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Subject, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static StringFormElement Email(
             this FormModule<Domain.Employee>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Email, fl, ln);
@@ -2181,6 +2601,26 @@ namespace MSharp
         public static StringFormElement Password(
             this FormModule<Domain.Register>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Password, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Email(
+            this FormModule<Domain.Registration>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Email, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement FirstName(
+            this FormModule<Domain.Registration>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static BooleanFormElement IsSubscribed(
+            this FormModule<Domain.Registration>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.IsSubscribed, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement LastName(
+            this FormModule<Domain.Registration>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.LastName, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static AssociationFormElement Country(

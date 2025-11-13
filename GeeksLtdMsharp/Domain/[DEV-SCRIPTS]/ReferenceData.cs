@@ -23,8 +23,20 @@ namespace Domain
             await CreateAdmins();
             await CreateContacts();
             await CreateUsers();
+            await CreateEmailTemplate();
         }
 
+        async Task CreateEmailTemplate()
+        {
+            await Create(new EmailTemplate
+            {
+                Key = "RegistrationConfirmationEmail",
+                Subject = "Welcome to our website",
+                Body = "Dear [#FIRSTNAME#] [#LASTNAME#] <br/> <br/> <br/> Thanks for registering <br/> Regards.",
+                MandatoryPlaceholders = "FIRSTNAME, LASTNAME"
+
+            });
+        }
         async Task CreateAdmins()
         {
             
