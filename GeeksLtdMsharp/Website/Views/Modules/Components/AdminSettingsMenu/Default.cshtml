@@ -65,5 +65,12 @@
          <a href="@Url.Index("TimeLog")" data-redirect="ajax"><i class="fas fa-cog"></i>
             Time logs</a>
       </li>
+      @if (User.IsInRole("Admin"))
+      {
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "Employees") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("Employees/")))">
+         <a href="@Url.Index("Employee")" data-redirect="ajax"><i class="far fa-address-book"></i>
+            Employees</a>
+      </li>
+      }
    </ul>
 </div>

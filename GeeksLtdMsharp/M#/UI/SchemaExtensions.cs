@@ -213,6 +213,31 @@ namespace MSharp
         => @this.container.Search(x => x.TotalWork, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Employee> Email(
+            this ListModule<Domain.Employee>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Email, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Employee> FirstName(
+            this ListModule<Domain.Employee>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Employee> IDCard(
+            this ListModule<Domain.Employee>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.IDCard, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Employee> LastName(
+            this ListModule<Domain.Employee>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.LastName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Employee> Warnings(
+            this ListModule<Domain.Employee>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Warnings, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.Invoice> Amount(
             this ListModule<Domain.Invoice>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.Amount, fl, ln);
@@ -671,6 +696,31 @@ namespace MSharp
         public static ViewElement<Domain.Developer, decimal> TotalWork(
             this ViewModule<Domain.Developer>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.TotalWork, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Employee, string> Email(
+            this ViewModule<Domain.Employee>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Email, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Employee, string> FirstName(
+            this ViewModule<Domain.Employee>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Employee, Blob> IDCard(
+            this ViewModule<Domain.Employee>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.IDCard, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Employee, string> LastName(
+            this ViewModule<Domain.Employee>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.LastName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Employee, string> Warnings(
+            this ViewModule<Domain.Employee>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Warnings, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static ViewElement<Domain.Invoice, decimal?> Amount(
@@ -1133,6 +1183,31 @@ namespace MSharp
         => @this.container.Column(x => x.TotalWork, fl, ln);
         
         [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Employee, string> Email(
+            this ListModule<Domain.Employee>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Email, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Employee, string> FirstName(
+            this ListModule<Domain.Employee>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Employee, Blob> IDCard(
+            this ListModule<Domain.Employee>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.IDCard, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Employee, string> LastName(
+            this ListModule<Domain.Employee>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.LastName, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Employee, string> Warnings(
+            this ListModule<Domain.Employee>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Warnings, fl, ln);
+        
+        [MethodColor("#0CCC68")]
         public static ViewElement<Domain.Invoice, decimal?> Amount(
             this ListModule<Domain.Invoice>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.Amount, fl, ln);
@@ -1571,6 +1646,26 @@ namespace MSharp
         public static AssociationFormElement TimeLogs(
             this FormModule<Domain.Developer>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.TimeLogs, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Email(
+            this FormModule<Domain.Employee>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Email, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement FirstName(
+            this FormModule<Domain.Employee>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.FirstName, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static BinaryFormElement IDCard(
+            this FormModule<Domain.Employee>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.IDCard, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement LastName(
+            this FormModule<Domain.Employee>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.LastName, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static NumberFormElement Amount(

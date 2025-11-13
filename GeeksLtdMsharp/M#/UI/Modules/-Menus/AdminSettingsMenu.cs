@@ -67,6 +67,11 @@ namespace Modules
             Item("Time logs")
                 .Icon(FA.Cog)
                 .OnClick(x => x.Go<TimeLogPage>());
+
+            Item("Employees")
+                .VisibleIf(AppRole.Admin)
+                .Icon(FA.AddressBook)
+                .OnClick(x => x.Go<EmployeePage>());
         }
     }
 }
