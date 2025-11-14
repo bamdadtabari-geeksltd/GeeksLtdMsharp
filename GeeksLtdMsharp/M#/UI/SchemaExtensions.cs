@@ -413,6 +413,41 @@ namespace MSharp
         => @this.container.Search(x => x.Warnings, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Fan> DateOfBirth(
+            this ListModule<Domain.Fan>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.DateOfBirth, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Fan> Email(
+            this ListModule<Domain.Fan>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Email, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Fan> IsRegistrationCompleted(
+            this ListModule<Domain.Fan>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.IsRegistrationCompleted, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Fan> Name(
+            this ListModule<Domain.Fan>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Fan> Player(
+            this ListModule<Domain.Fan>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Player, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Fan> StartDate(
+            this ListModule<Domain.Fan>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.StartDate, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Fan> SupportComments(
+            this ListModule<Domain.Fan>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.SupportComments, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.Invoice> Amount(
             this ListModule<Domain.Invoice>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.Amount, fl, ln);
@@ -481,6 +516,21 @@ namespace MSharp
         public static PropertyFilterElement<Domain.PasswordResetTicket> User(
             this ListModule<Domain.PasswordResetTicket>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.User, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Player> Fans(
+            this ListModule<Domain.Player>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Fans, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Player> Name(
+            this ListModule<Domain.Player>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Player> Photo(
+            this ListModule<Domain.Player>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Photo, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.Product> IsFood(
@@ -1133,6 +1183,41 @@ namespace MSharp
         => @this.container.Field(x => x.Warnings, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Fan, DateTime?> DateOfBirth(
+            this ViewModule<Domain.Fan>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.DateOfBirth, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Fan, string> Email(
+            this ViewModule<Domain.Fan>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Email, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Fan, bool> IsRegistrationCompleted(
+            this ViewModule<Domain.Fan>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.IsRegistrationCompleted, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Fan, string> Name(
+            this ViewModule<Domain.Fan>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Fan, Domain.Player> Player(
+            this ViewModule<Domain.Fan>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Player, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Fan, DateTime> StartDate(
+            this ViewModule<Domain.Fan>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.StartDate, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Fan, string> SupportComments(
+            this ViewModule<Domain.Fan>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.SupportComments, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static ViewElement<Domain.Invoice, decimal?> Amount(
             this ViewModule<Domain.Invoice>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Amount, fl, ln);
@@ -1201,6 +1286,21 @@ namespace MSharp
         public static ViewElement<Domain.PasswordResetTicket, Domain.User> User(
             this ViewModule<Domain.PasswordResetTicket>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.User, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Player, IDatabaseQuery<Domain.Fan>> Fans(
+            this ViewModule<Domain.Player>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Fans, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Player, string> Name(
+            this ViewModule<Domain.Player>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Player, Blob> Photo(
+            this ViewModule<Domain.Player>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Photo, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static ViewElement<Domain.Product, bool> IsFood(
@@ -1853,6 +1953,41 @@ namespace MSharp
         => @this.container.Column(x => x.Warnings, fl, ln);
         
         [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Fan, DateTime?> DateOfBirth(
+            this ListModule<Domain.Fan>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.DateOfBirth, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Fan, string> Email(
+            this ListModule<Domain.Fan>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Email, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Fan, bool> IsRegistrationCompleted(
+            this ListModule<Domain.Fan>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.IsRegistrationCompleted, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Fan, string> Name(
+            this ListModule<Domain.Fan>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Name, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Fan, Domain.Player> Player(
+            this ListModule<Domain.Fan>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Player, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Fan, DateTime> StartDate(
+            this ListModule<Domain.Fan>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.StartDate, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Fan, string> SupportComments(
+            this ListModule<Domain.Fan>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.SupportComments, fl, ln);
+        
+        [MethodColor("#0CCC68")]
         public static ViewElement<Domain.Invoice, decimal?> Amount(
             this ListModule<Domain.Invoice>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.Amount, fl, ln);
@@ -1921,6 +2056,21 @@ namespace MSharp
         public static ViewElement<Domain.PasswordResetTicket, Domain.User> User(
             this ListModule<Domain.PasswordResetTicket>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.User, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Player, IDatabaseQuery<Domain.Fan>> Fans(
+            this ListModule<Domain.Player>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Fans, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Player, string> Name(
+            this ListModule<Domain.Player>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Name, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Player, Blob> Photo(
+            this ListModule<Domain.Player>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Photo, fl, ln);
         
         [MethodColor("#0CCC68")]
         public static ViewElement<Domain.Product, bool> IsFood(
@@ -2548,6 +2698,41 @@ namespace MSharp
         => @this.container.Field(x => x.LastName, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static DateTimeFormElement DateOfBirth(
+            this FormModule<Domain.Fan>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.DateOfBirth, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Email(
+            this FormModule<Domain.Fan>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Email, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static BooleanFormElement IsRegistrationCompleted(
+            this FormModule<Domain.Fan>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.IsRegistrationCompleted, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Name(
+            this FormModule<Domain.Fan>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static AssociationFormElement Player(
+            this FormModule<Domain.Fan>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Player, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static DateTimeFormElement StartDate(
+            this FormModule<Domain.Fan>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.StartDate, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement SupportComments(
+            this FormModule<Domain.Fan>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.SupportComments, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static NumberFormElement Amount(
             this FormModule<Domain.Invoice>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Amount, fl, ln);
@@ -2611,6 +2796,21 @@ namespace MSharp
         public static AssociationFormElement User(
             this FormModule<Domain.PasswordResetTicket>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.User, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static AssociationFormElement Fans(
+            this FormModule<Domain.Player>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Fans, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Name(
+            this FormModule<Domain.Player>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static BinaryFormElement Photo(
+            this FormModule<Domain.Player>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Photo, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static BooleanFormElement IsFood(

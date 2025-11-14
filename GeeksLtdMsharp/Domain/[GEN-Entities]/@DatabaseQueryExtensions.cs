@@ -87,6 +87,20 @@
             return query.WhereNotIn(Database.Of<Domain.TimeLog>().Where(criteria), x => x.Developer);
         }
         
+        /// <summary>Filters the Player records to the ones having any associated Fans with the specified criteria.</summary>
+        public static IDatabaseQuery<Domain.Player> HavingAnyFans(
+            this IDatabaseQuery<Domain.Player> query, Expression<Func<Domain.Fan, bool>> criteria = null)
+        {
+            return query.WhereIn(Database.Of<Domain.Fan>().Where(criteria), x => x.Player);
+        }
+        
+        /// <summary>Filters the Player records to the ones having no associated Fans with the specified criteria.</summary>
+        public static IDatabaseQuery<Domain.Player> HavingNoFans(
+            this IDatabaseQuery<Domain.Player> query, Expression<Func<Domain.Fan, bool>> criteria = null)
+        {
+            return query.WhereNotIn(Database.Of<Domain.Fan>().Where(criteria), x => x.Player);
+        }
+        
         /// <summary>
         /// Filters the ProductCategory records to the ones having any associated Products with the specified criteria.<para/>
         /// </summary>

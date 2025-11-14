@@ -96,5 +96,9 @@
          <a href="@Url.Index("Country2")" data-redirect="ajax"><i class="fas fa-cog"></i>
             Countries 2</a>
       </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "TennisPlayers") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("TennisPlayers/")))">
+         <a href="@Url.Index("TennisPlayer")" data-redirect="ajax"><i class="fas fa-cog"></i>
+            Tennis players</a>
+      </li>
    </ul>
 </div>

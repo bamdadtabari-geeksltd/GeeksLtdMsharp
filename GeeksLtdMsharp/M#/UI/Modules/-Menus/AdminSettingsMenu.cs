@@ -96,6 +96,11 @@ namespace Modules
             Item("Countries 2")
                 .Icon(FA.Cog)
                 .OnClick(x => x.Go<Country2Page>());
+
+
+            Item("Tennis players")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<TennisPlayerPage>());
         }
     }
 }
