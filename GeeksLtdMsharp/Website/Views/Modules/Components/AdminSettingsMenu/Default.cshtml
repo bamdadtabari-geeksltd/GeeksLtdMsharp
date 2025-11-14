@@ -100,5 +100,22 @@
          <a href="@Url.Index("TennisPlayer")" data-redirect="ajax"><i class="fas fa-cog"></i>
             Tennis players</a>
       </li>
-   </ul>
-</div>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "AllCategories") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("AllCategories/")))">
+         <a href="@Url.Index("Category")" data-redirect="ajax"><i class="fas fa-cog"></i>
+            All Categories</a>
+      </li>
+      <li class="@("active".OnlyWhen(Model.ActiveItem == "AllContacts") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("AllContacts/")))">
+         <a href="@Url.Index("Contact2")" data-redirect="ajax"><i class="fas fa-cog"></i>
+            All Contacts</a>
+      </li>
+      @foreach (var item in await Database.GetList
+      <Category>
+         ())
+         {
+         <li class="@("active".OnlyWhen(Model.ActiveItem == (item.ID).ToStringOrEmpty()) + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith((item.ID).ToStringOrEmpty() + "/")))">
+            <a name="Category"><i class="fas fa-cog"></i>
+               @item.Name</a>
+         </li>
+         }
+      </ul>
+   </div>

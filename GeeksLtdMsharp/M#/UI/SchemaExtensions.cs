@@ -153,6 +153,16 @@ namespace MSharp
         => @this.container.Search(x => x.UserIp, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Category> Contacts2(
+            this ListModule<Domain.Category>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Contacts2, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Category> Name(
+            this ListModule<Domain.Category>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.City> Country(
             this ListModule<Domain.City>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.Country, fl, ln);
@@ -216,6 +226,56 @@ namespace MSharp
         public static PropertyFilterElement<Domain.Contact> PhoneNumber(
             this ListModule<Domain.Contact>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.PhoneNumber, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Contact2> AddressLine1(
+            this ListModule<Domain.Contact2>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.AddressLine1, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Contact2> AddressLine2(
+            this ListModule<Domain.Contact2>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.AddressLine2, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Contact2> Category(
+            this ListModule<Domain.Contact2>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Category, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Contact2> Comments(
+            this ListModule<Domain.Contact2>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Comments, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Contact2> DateOfBirth(
+            this ListModule<Domain.Contact2>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.DateOfBirth, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Contact2> Email(
+            this ListModule<Domain.Contact2>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Email, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Contact2> Name(
+            this ListModule<Domain.Contact2>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Contact2> Postcode(
+            this ListModule<Domain.Contact2>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Postcode, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Contact2> Telephone(
+            this ListModule<Domain.Contact2>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Telephone, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Contact2> Town(
+            this ListModule<Domain.Contact2>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Town, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.Country> Cities(
@@ -923,6 +983,16 @@ namespace MSharp
         => @this.container.Field(x => x.UserIp, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Category, IDatabaseQuery<Domain.Contact2>> Contacts2(
+            this ViewModule<Domain.Category>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Contacts2, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Category, string> Name(
+            this ViewModule<Domain.Category>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static ViewElement<Domain.City, Domain.Country> Country(
             this ViewModule<Domain.City>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Country, fl, ln);
@@ -986,6 +1056,56 @@ namespace MSharp
         public static ViewElement<Domain.Contact, string> PhoneNumber(
             this ViewModule<Domain.Contact>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.PhoneNumber, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Contact2, string> AddressLine1(
+            this ViewModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.AddressLine1, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Contact2, string> AddressLine2(
+            this ViewModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.AddressLine2, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Contact2, Domain.Category> Category(
+            this ViewModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Category, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Contact2, string> Comments(
+            this ViewModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Comments, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Contact2, DateTime?> DateOfBirth(
+            this ViewModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.DateOfBirth, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Contact2, string> Email(
+            this ViewModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Email, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Contact2, string> Name(
+            this ViewModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Contact2, string> Postcode(
+            this ViewModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Postcode, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Contact2, string> Telephone(
+            this ViewModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Telephone, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Contact2, string> Town(
+            this ViewModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Town, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static ViewElement<Domain.Country, IDatabaseQuery<Domain.City>> Cities(
@@ -1693,6 +1813,16 @@ namespace MSharp
         => @this.container.Column(x => x.UserIp, fl, ln);
         
         [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Category, IDatabaseQuery<Domain.Contact2>> Contacts2(
+            this ListModule<Domain.Category>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Contacts2, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Category, string> Name(
+            this ListModule<Domain.Category>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Name, fl, ln);
+        
+        [MethodColor("#0CCC68")]
         public static ViewElement<Domain.City, Domain.Country> Country(
             this ListModule<Domain.City>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.Country, fl, ln);
@@ -1756,6 +1886,56 @@ namespace MSharp
         public static ViewElement<Domain.Contact, string> PhoneNumber(
             this ListModule<Domain.Contact>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.PhoneNumber, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Contact2, string> AddressLine1(
+            this ListModule<Domain.Contact2>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.AddressLine1, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Contact2, string> AddressLine2(
+            this ListModule<Domain.Contact2>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.AddressLine2, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Contact2, Domain.Category> Category(
+            this ListModule<Domain.Contact2>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Category, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Contact2, string> Comments(
+            this ListModule<Domain.Contact2>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Comments, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Contact2, DateTime?> DateOfBirth(
+            this ListModule<Domain.Contact2>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.DateOfBirth, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Contact2, string> Email(
+            this ListModule<Domain.Contact2>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Email, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Contact2, string> Name(
+            this ListModule<Domain.Contact2>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Name, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Contact2, string> Postcode(
+            this ListModule<Domain.Contact2>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Postcode, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Contact2, string> Telephone(
+            this ListModule<Domain.Contact2>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Telephone, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Contact2, string> Town(
+            this ListModule<Domain.Contact2>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Town, fl, ln);
         
         [MethodColor("#0CCC68")]
         public static ViewElement<Domain.Country, IDatabaseQuery<Domain.City>> Cities(
@@ -2458,6 +2638,16 @@ namespace MSharp
         => @this.container.Field(x => x.UserIp, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static AssociationFormElement Contacts2(
+            this FormModule<Domain.Category>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Contacts2, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Name(
+            this FormModule<Domain.Category>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static AssociationFormElement Country(
             this FormModule<Domain.City>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Country, fl, ln);
@@ -2521,6 +2711,56 @@ namespace MSharp
         public static StringFormElement PhoneNumber(
             this FormModule<Domain.Contact>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.PhoneNumber, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement AddressLine1(
+            this FormModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.AddressLine1, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement AddressLine2(
+            this FormModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.AddressLine2, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static AssociationFormElement Category(
+            this FormModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Category, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Comments(
+            this FormModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Comments, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static DateTimeFormElement DateOfBirth(
+            this FormModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.DateOfBirth, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Email(
+            this FormModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Email, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Name(
+            this FormModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Postcode(
+            this FormModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Postcode, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Telephone(
+            this FormModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Telephone, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Town(
+            this FormModule<Domain.Contact2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Town, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static AssociationFormElement Cities(

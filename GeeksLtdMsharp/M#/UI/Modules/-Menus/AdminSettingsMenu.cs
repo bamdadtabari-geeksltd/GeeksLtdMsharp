@@ -101,6 +101,23 @@ namespace Modules
             Item("Tennis players")
                 .Icon(FA.Cog)
                 .OnClick(x => x.Go<TennisPlayerPage>());
+
+
+            Item("All Categories")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<CategoryPage>());
+
+            Item("All Contacts")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<Contact2Page>());
+
+            Item<Contact2Page>()
+                .DataSourceType<Domain.Category>()
+                .Name("Category")
+                .Text("C#:item.Name")
+                .Key("C#:item.ID")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<Contact2Page>().Send("category", "item.ID"));
         }
     }
 }
