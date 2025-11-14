@@ -173,6 +173,31 @@ namespace MSharp
         => @this.container.Search(x => x.Invoices, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Company> Country2(
+            this ListModule<Domain.Company>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Country2, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Company> MarketShare(
+            this ListModule<Domain.Company>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.MarketShare, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Company> Name(
+            this ListModule<Domain.Company>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Company> NumberOfEmployees(
+            this ListModule<Domain.Company>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.NumberOfEmployees, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Company> RegistrationDate(
+            this ListModule<Domain.Company>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.RegistrationDate, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.Contact> FirstName(
             this ListModule<Domain.Contact>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.FirstName, fl, ln);
@@ -216,6 +241,16 @@ namespace MSharp
         public static PropertyFilterElement<Domain.Country> Resellers(
             this ListModule<Domain.Country>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Search(x => x.Resellers, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Country2> Code(
+            this ListModule<Domain.Country2>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Code, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static PropertyFilterElement<Domain.Country2> Name(
+            this ListModule<Domain.Country2>.SearchComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Search(x => x.Name, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static PropertyFilterElement<Domain.Customer> Country(
@@ -858,6 +893,31 @@ namespace MSharp
         => @this.container.Field(x => x.Invoices, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Company, Domain.Country2> Country2(
+            this ViewModule<Domain.Company>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Country2, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Company, decimal> MarketShare(
+            this ViewModule<Domain.Company>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.MarketShare, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Company, string> Name(
+            this ViewModule<Domain.Company>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Company, int> NumberOfEmployees(
+            this ViewModule<Domain.Company>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.NumberOfEmployees, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Company, DateTime> RegistrationDate(
+            this ViewModule<Domain.Company>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.RegistrationDate, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static ViewElement<Domain.Contact, string> FirstName(
             this ViewModule<Domain.Contact>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.FirstName, fl, ln);
@@ -901,6 +961,16 @@ namespace MSharp
         public static ViewElement<Domain.Country, IDatabaseQuery<Domain.Reseller>> Resellers(
             this ViewModule<Domain.Country>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Resellers, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Country2, string> Code(
+            this ViewModule<Domain.Country2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Code, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static ViewElement<Domain.Country2, string> Name(
+            this ViewModule<Domain.Country2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static ViewElement<Domain.Customer, Domain.Country> Country(
@@ -1543,6 +1613,31 @@ namespace MSharp
         => @this.container.Column(x => x.Invoices, fl, ln);
         
         [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Company, Domain.Country2> Country2(
+            this ListModule<Domain.Company>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Country2, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Company, decimal> MarketShare(
+            this ListModule<Domain.Company>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.MarketShare, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Company, string> Name(
+            this ListModule<Domain.Company>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Name, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Company, int> NumberOfEmployees(
+            this ListModule<Domain.Company>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.NumberOfEmployees, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Company, DateTime> RegistrationDate(
+            this ListModule<Domain.Company>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.RegistrationDate, fl, ln);
+        
+        [MethodColor("#0CCC68")]
         public static ViewElement<Domain.Contact, string> FirstName(
             this ListModule<Domain.Contact>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.FirstName, fl, ln);
@@ -1586,6 +1681,16 @@ namespace MSharp
         public static ViewElement<Domain.Country, IDatabaseQuery<Domain.Reseller>> Resellers(
             this ListModule<Domain.Country>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Column(x => x.Resellers, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Country2, string> Code(
+            this ListModule<Domain.Country2>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Code, fl, ln);
+        
+        [MethodColor("#0CCC68")]
+        public static ViewElement<Domain.Country2, string> Name(
+            this ListModule<Domain.Country2>.ColumnComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Column(x => x.Name, fl, ln);
         
         [MethodColor("#0CCC68")]
         public static ViewElement<Domain.Customer, Domain.Country> Country(
@@ -2223,6 +2328,31 @@ namespace MSharp
         => @this.container.Field(x => x.Invoices, fl, ln);
         
         [MethodColor("#AFCD14")]
+        public static AssociationFormElement Country2(
+            this FormModule<Domain.Company>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Country2, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static NumberFormElement MarketShare(
+            this FormModule<Domain.Company>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.MarketShare, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Name(
+            this FormModule<Domain.Company>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static NumberFormElement NumberOfEmployees(
+            this FormModule<Domain.Company>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.NumberOfEmployees, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static DateTimeFormElement RegistrationDate(
+            this FormModule<Domain.Company>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.RegistrationDate, fl, ln);
+        
+        [MethodColor("#AFCD14")]
         public static StringFormElement FirstName(
             this FormModule<Domain.Contact>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.FirstName, fl, ln);
@@ -2266,6 +2396,16 @@ namespace MSharp
         public static AssociationFormElement Resellers(
             this FormModule<Domain.Country>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
         => @this.container.Field(x => x.Resellers, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Code(
+            this FormModule<Domain.Country2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Code, fl, ln);
+        
+        [MethodColor("#AFCD14")]
+        public static StringFormElement Name(
+            this FormModule<Domain.Country2>.FieldComponents @this, [_F] string fl = null, [_L] int ln = 0)
+        => @this.container.Field(x => x.Name, fl, ln);
         
         [MethodColor("#AFCD14")]
         public static AssociationFormElement Country(

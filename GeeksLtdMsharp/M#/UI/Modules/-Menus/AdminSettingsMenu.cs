@@ -85,9 +85,17 @@ namespace Modules
                 .Icon(FA.WindowRestore)
                 .OnClick(x => x.Go<ResellerPage>());
 
-            Item("Register")
+            Item("Registration")
                 .Icon(FA.Cog)
                 .OnClick(x => x.Go<RegistrationPage>());
+
+            Item("Companies")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<CompanyPage>());
+
+            Item("Countries 2")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<Country2Page>());
         }
     }
 }
