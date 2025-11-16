@@ -29,7 +29,7 @@ namespace AppTests
         {
             // Clean up the browser session - check Pangolin docs for proper method
             // Options: _uiContext?.Close(); _uiContext?.Quit(); _uiContext?.Dispose();
-            _uiContext?.Close();
+            _uiContext?.WebDriver.Dispose();
         }
 
         [TestMethod]
@@ -37,14 +37,14 @@ namespace AppTests
         {
             // Navigate to the login page
             // Check Pangolin docs for navigation method: NavigateToUrl, GoToUrl, etc.
-            _uiContext!.NavigateToUrl($"{BaseUrl}/login");
+            _uiContext!.Goto($"{BaseUrl}/login");
 
             // Create the page model instance using UIContext
             var loginPage = new Modules.User.LoginForm(_uiContext);
 
             // Verify the page loaded correctly
             // Adjust method names based on Pangolin API: WaitUntilVisible, WaitForElement, etc.
-            loginPage.Header.WaitUntilVisible();
+            loginPage.Header.Expect();
 
             // Verify form elements are present
             // Adjust assertion methods based on Pangolin API: IsVisible, Exists, etc.
