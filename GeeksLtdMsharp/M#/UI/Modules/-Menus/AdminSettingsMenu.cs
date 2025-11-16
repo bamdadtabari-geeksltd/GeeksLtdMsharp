@@ -118,6 +118,10 @@ namespace Modules
                 .Key("C#:item.ID")
                 .Icon(FA.Cog)
                 .OnClick(x => x.Go<Contact2Page>().Send("category", "item.ID"));
+
+            Item("Candidates")
+                .Icon(FA.Cog)
+                .OnClick(x => x.Go<CandidatePage>());
         }
     }
 }

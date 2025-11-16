@@ -117,5 +117,9 @@
                @item.Name</a>
          </li>
          }
+         <li class="@("active".OnlyWhen(Model.ActiveItem == "Candidates") + " active-parent".OnlyWhen(Model.ActiveItem.OrEmpty().StartsWith("Candidates/")))">
+            <a href="@Url.Index("Candidate")" data-redirect="ajax"><i class="fas fa-cog"></i>
+               Candidates</a>
+         </li>
       </ul>
    </div>

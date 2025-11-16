@@ -24,6 +24,15 @@ namespace Domain
             await CreateContacts();
             await CreateUsers();
             await CreateEmailTemplate();
+            await InitEnums();
+        }
+
+        async Task InitEnums()
+        {
+            await Create(new Status { Name = "Pending" });
+            await Create(new Status { Name = "Interviewed" });
+            await Create(new Status { Name = "Rejected" });
+            await Create(new Status { Name = "Offered" });
         }
 
         async Task CreateEmailTemplate()
