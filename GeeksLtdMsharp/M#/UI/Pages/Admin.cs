@@ -5,6 +5,8 @@ public class AdminPage : RootPage
 {
     public AdminPage()
     {
+        BrowserTitle("Admin");
+
         Roles(AppRole.Admin);
 
         Add<Modules.MainMenu>();
