@@ -31,6 +31,8 @@ namespace Controllers
         [Route("admin")]
         public async Task<ActionResult> Index(vm.MainMenu info)
         {
+            ViewData["Title"] = "Admin";
+            
             return Redirect(Url.Index("AdminSettings"));
             
             ViewBag.Info = info;

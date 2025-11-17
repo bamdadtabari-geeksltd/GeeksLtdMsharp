@@ -30,6 +30,8 @@ namespace Controllers
         [Route("401")]
         public async Task<ActionResult> Index(vm.Error401 info)
         {
+            ViewData["Title"] = "401";
+            
             return View(info);
         }
     }
